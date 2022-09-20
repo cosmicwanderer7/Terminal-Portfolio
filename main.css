@@ -746,6 +746,15 @@ video {
 .overflow-y-scroll {
   overflow-y: scroll;
 }
+.whitespace-pre {
+  white-space: pre;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+.break-words {
+  overflow-wrap: break-word;
+}
 .rounded-\[10px\] {
   border-radius: 10px;
 }
@@ -882,6 +891,15 @@ video {
 .pr-3 {
   padding-right: 0.75rem;
 }
+.pr-\[0\.9rem\] {
+  padding-right: 0.9rem;
+}
+.pr-\[1rem\] {
+  padding-right: 1rem;
+}
+.pr-\[0\.7rem\] {
+  padding-right: 0.7rem;
+}
 .pr-4 {
   padding-right: 1rem;
 }
@@ -924,36 +942,6 @@ video {
 .pl-4 {
   padding-left: 1rem;
 }
-.pr-\[\] {
-  padding-right: ;
-}
-.pr-\[1\.5\] {
-  padding-right: 1.5;
-}
-.pr-\[1\.5rem\] {
-  padding-right: 1.5rem;
-}
-.pr-\[rem\] {
-  padding-right: rem;
-}
-.pr-\[0\.rem\] {
-  padding-right: 0.rem;
-}
-.pr-\[0\.9rem\] {
-  padding-right: 0.9rem;
-}
-.pr-\[0\.10rem\] {
-  padding-right: 0.10rem;
-}
-.pr-\[1rem\] {
-  padding-right: 1rem;
-}
-.pr-\[01rem\] {
-  padding-right: 01rem;
-}
-.pr-\[0\.91rem\] {
-  padding-right: 0.91rem;
-}
 .text-center {
   text-align: center;
 }
@@ -963,6 +951,9 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-\[10px\] {
+  font-size: 10px;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -984,11 +975,23 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-\[px\] {
+  font-size: px;
+}
+.text-\[40px\] {
+  font-size: 40px;
+}
+.text-\[20px\] {
+  font-size: 20px;
+}
 .font-medium {
   font-weight: 500;
 }
 .font-bold {
   font-weight: 700;
+}
+.leading-none {
+  line-height: 1;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -1035,6 +1038,27 @@ video {
 .text-slate-700 {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+.text-\[\#f0f8a84a\] {
+  color: #f0f8a84a;
+}
+.text-\[\#8f94634a\] {
+  color: #8f94634a;
+}
+.text-\[\#686e374a\] {
+  color: #686e374a;
+}
+.text-\[\#6e37694a\] {
+  color: #6e37694a;
+}
+.text-\[\#6e6d374a\] {
+  color: #6e6d374a;
+}
+.text-\[\#e2e06e4a\] {
+  color: #e2e06e4a;
+}
+.text-\[\#e2e06e81\] {
+  color: #e2e06e81;
 }
 .underline {
   -webkit-text-decoration-line: underline;
