@@ -952,8 +952,8 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-\[20px\] {
-  font-size: 20px;
+.text-\[13px\] {
+  font-size: 13px;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -974,18 +974,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-.text-\[10px\] {
-  font-size: 10px;
-}
-.text-\[15px\] {
-  font-size: 15px;
-}
-.text-\[1px\] {
-  font-size: 1px;
-}
-.text-\[13px\] {
-  font-size: 13px;
 }
 .font-medium {
   font-weight: 500;
@@ -1122,10 +1110,6 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:text-\[10px\] {
-    font-size: 10px;
   }
 
   .md\:text-\[20px\] {
