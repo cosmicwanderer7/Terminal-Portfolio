@@ -9,3 +9,74 @@ body {
      background-size: cover;
   }
 
+@media only screen and (min-width: 375px){
+ 
+
+  .ascii{
+      font-size: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 413px){
+ 
+
+  .ascii{
+      font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 522px){
+ 
+
+  .ascii{
+      font-size: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 591px){
+ 
+
+  .ascii{
+      font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 621px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 810px){
+ 
+
+  .ascii{
+      font-size: 17px;
+  }
+
+}
+
+@media only screen and (min-width: 815px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px){
+ 
+
+  .ascii{
+      font-size: 23px;
+  }
+
+}
