@@ -19,6 +19,27 @@ body {
 }
 
 @media only screen and (min-width: 413px){
+ @tailwind base;@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   
+    background-image: url('assets/bg.png');
+    background-repeat: repeat;
+     background-size: cover;
+  }
+
+@media only screen and (min-width: 375px){
+ 
+
+  .ascii{
+      font-size: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 413px){
  
 
   .ascii{
@@ -80,3 +101,245 @@ body {
   }
 
 }
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.user-input {
+  position: relative;
+}
+
+.user-input::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -10px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+   
+    background-image: url('assets/bg.png');
+    background-repeat: repeat;
+     background-size: cover;
+  }
+
+@media only screen and (min-width: 375px){
+ 
+
+  .ascii{
+      font-size: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 413px){
+ 
+
+  .ascii{
+      font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 522px){
+ 
+
+  .ascii{
+      font-size: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 591px){
+ 
+
+  .ascii{
+      font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 621px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 810px){
+ 
+
+  .ascii{
+      font-size: 17px;
+  }
+
+}
+
+@media only screen and (min-width: 815px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px){
+ 
+
+  .ascii{
+      font-size: 23px;
+  }
+
+}
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.user-input {
+  position: relative;
+}
+
+.user-input::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -10px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+  .ascii{
+      font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 522px){
+ 
+
+  .ascii{
+      font-size: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 591px){
+ 
+
+  .ascii{
+      font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 621px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 810px){
+ 
+
+  .ascii{
+      font-size: 17px;
+  }
+
+}
+
+@media only screen and (min-width: 815px){
+ 
+
+  .ascii{
+      font-size: 19px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px){
+ 
+
+  .ascii{
+      font-size: 23px;
+  }
+
+}
+
+.dummy-keyboard {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.user-input {
+  position: relative;
+}
+
+.user-input::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  right: -10px;
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
