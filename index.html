@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-<script src="https://kit.fontawesome.com/39565093f3.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/39565093f3.js""></script>
     <script>function close_window() {
   if (confirm("Close Window?")) {
     close();
@@ -18,6 +18,8 @@
 }
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.17/dist/index.min.js"></script>
+<script src="index.js"></script>
   </head>
   <body>
     <div class="p-4" onclick="document.getElementById('dummyKeyboard').focus();"
@@ -61,15 +63,31 @@
               <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-dev pr-[0.8rem] justify-items-start"></i>Dev</div>
           </div>
             </div>
-          <div class="font-medium text-[#b0b2b6]" id="terminalOutput">
+   <div
+                  class="terminal-window primary-bg"
+                  onclick="document.getElementById('dummyKeyboard').focus();"
+                >
+                  <div class="terminal-output" id="terminalOutput">
                     <div class="terminal-line">
                       <span class="help-msg"
                         >Welcome to my portfolio! — Type
                         <span class="code">help</span> for a list of supported
                         commands.</span
-                      ><pre><font color="#586E75"><b>prithvi@vaio-VPCCW16FG</b></font>:<font color="#839496"><b>~</b></font>$ 
-</pre><input type="text">
-
+                      >
+                    </div>
+                  </div>
+                  <div class="terminal-line">
+                    <span class="success">➜</span>
+                    <span class="directory">~</span>
+                    <span class="user-input" id="userInput"></span>
+                    <input
+                      type="text"
+                      id="dummyKeyboard"
+                      class="dummy-keyboard"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
         </div>
       </div>
 
