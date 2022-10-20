@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="main.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-<script src="https://kit.fontawesome.com/39565093f3.js""></script>
-    <script>function close_window() {
-  if (confirm("Close Window?")) {
-    close();
-  }
-}
 
-</script>
-<script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.17/dist/index.min.js"></script>
-<script src="index.js"></script>
-  </head>
-  <body>
-    <div class="p-4" onclick="document.getElementById('dummyKeyboard').focus();"
->
-     <div
-        class="backdrop-blur-xs bg-[#0f0f0ff1] border-2 border-[#f7b7f0b9] rounded-[10px] shadow-xl shadow-[#1d1e1fb4] min-h-[35rem] resize overflow-auto  " 
-      >
- 
-        <header>
-          <p class="p-2 text-center text-slate-400">
-            <i
-              class="fa-brands fa-github  text-xl float-left text-slate-500 hover:text-pink-800"
-            ></i 
-            >prithvi@vaio-VPCCW16FG
-            <a href="javascript:close_window();"><i
-              class="fa-solid fa-circle-xmark text-xl justify-end text-slate-500 hover:text-red-500 items-end  float-right"
-            ></i></a>
-          </p><hr class="border-[#fcaff3a2]  border-[1px]">
-        </header>
-        <div class="p-4">
-          <div class="flex flex-col md:flex-row">
-            <pre class="ascii text-[#a9f2f081] text-[13px] whitespace-pre-wrap inline-block break-words leading-none" >
-██████╗░██████╗░██╗████████╗██╗░░██╗██╗░░░██╗██╗         
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/39565093f3.js""></script>
+    <script>function close_window() {
+        if (confirm(" Close Window?")) { close(); }
+      } </script>
+       <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    $.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json',
+
+      function (data) {
+        let artist = document.getElementById("song")
+        let name = document.getElementById("track")
+
+        track = $(".track"),
+          artistVal = data.recenttracks.track[0].artist["#text"],
+          trackVal = data.recenttracks.track[0].name;
+
+
+        artist.append(artistVal);
+        name.append(trackVal);
+
+
+      });
+
+  </script>
+
+</head>
+
+<body style="font-family: 'Ubuntu', sans-serif;">
+  <div class="m-2 relative" onclick="document.getElementById('texter').focus();">
+    <div
+      class="ring-1 ring-purple-500 hover:backdrop-blur-[1px] bg-[#061826a1] border-[#7AE0CA] border  rounded-[4px] shadow-xl shadow-[#1d1e1fb4] min-h-[98vh] resize overflow-y-scroll ">
+
+      <header>
+        <p class="p-2 text-center text-slate-400">
+          <i
+            class="fa-brands fa-github pb-1 text-xl float-left text-slate-500 hover:text-pink-800"></i>prithvi@vaio-VPCCW16FG
+          <a href="javascript:close_window();"><i
+              class="fa-solid fa-circle-xmark text-xl justify-end text-slate-500 hover:text-red-500 items-end  float-right"></i></a>
+        </p>
+        <hr class="border-[#7AE0CA]">
+      </header>
+      <div class="p-4">
+        <div class="flex flex-col md:flex-row">
+          <pre
+            class="ascii pt-4 pb-9 prose lg:prose-xl text-[#8DE2D0] whitespace-pre-wrap inline-block break-words leading-none">
+██████╗░██████╗░██╗████████╗██╗░░██╗██╗░░░██╗██╗                      
 ██╔══██╗██╔══██╗██║╚══██╔══╝██║░░██║██║░░░██║██║   
 ██████╔╝██████╔╝██║░░░██║░░░███████║╚██╗░██╔╝██║
 ██╔═══╝░██╔══██╗██║░░░██║░░░██╔══██║░╚████╔╝░██║          
 ██║░░░░░██║░░██║██║░░░██║░░░██║░░██║░░╚██╔╝░░██║
-╚═╝░░░░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝░░╚═╝░░░╚═╝░░░╚═╝
-            </pre> 
-            <div class="pl-2"; style="font-family: 'Ubuntu', sans-serif;">
-            <div class="text-[#f0f8a88e] text-2lg"><i class="fa-solid fa-address-card pr-[0.9rem]"></i>Prithvi@vaio-VPCCW16FG
-               <pre>-----------------------</pre>
+╚═╝░░░░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝░░╚═╝░░░╚═╝░░░╚═╝  
+            </pre>
+          <div class="pl-2 float-right" ; style="font-family: 'Ubuntu', sans-serif;">
+            <div class="text-[#7AE0CA] text-2lg"><i class="fa-solid fa-address-card pr-[0.9rem]"></i>Prithvi Sanjay
+              Yewale
+              <pre class="text-[#8DE2D0]">--------------------</pre>
 
             </div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-solid fa-user pr-[0.9rem] justify-items-start"></i>Prithvi Yewale</div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-solid fa-file-invoice pr-[1rem] justify-items-start"></i>Resume</div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-github pr-[0.7rem] justify-items-start"></i>Github</div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-twitter pr-[0.7rem] justify-items-start"></i>Twitter</div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-linkedin-in pr-[0.9rem] justify-items-start"></i>Linkedin</div>
-             <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-instagram pr-[0.9rem] justify-items-start"></i>Instagram</div>
-              <div class="text-[#f0f8a88e] text-2sm"><i class="fa-brands fa-dev pr-[0.8rem] justify-items-start"></i>Dev</div>
-          </div>
+
+            <div class="text-[#7AE0CA] text-2sm"><i
+                class="fa-solid fa-file-invoice pr-[1rem] justify-items-start"></i>Resume</div>
+            <div class="text-[#7AE0CA] text-2sm"><i
+                class="fa-brands fa-github pr-[0.7rem] justify-items-start"></i>Github</div>
+            <div class="text-[#7AE0CA] text-2sm"><i
+                class="fa-brands fa-twitter pr-[0.7rem] justify-items-start"></i>Twitter</div>
+            <div class="text-[#7AE0CA] text-2sm"><i
+                class="fa-brands fa-linkedin-in pr-[0.9rem] justify-items-start"></i>Linkedin</div>
+            <div class="text-[#7AE0CA] text-2sm"><i
+                class="fa-brands fa-instagram pr-[0.9rem] justify-items-start"></i>Instagram</div>
+            <div class="text-[#7AE0CA] text-2sm"><i class="fa-brands fa-dev pr-[0.8rem] justify-items-start"></i>Dev
             </div>
-   <div
-                  class="terminal-window primary-bg"
-                  onclick="document.getElementById('dummyKeyboard').focus();"
-                >
-                  <div class="terminal-output" id="terminalOutput">
-                    <div class="terminal-line">
-                      <span class="help-msg"
-                        >Welcome to my portfolio! — Type
-                        <span class="code">help</span> for a list of supported
-                        commands.</span
-                      >
-                    </div>
-                  </div>
-                  <div class="terminal-line">
-                    <span class="success">➜</span>
-                    <span class="directory">~</span>
-                    <span class="user-input" id="userInput"></span>
-                    <input
-                      type="text"
-                      id="dummyKeyboard"
-                      class="dummy-keyboard"
-                      autocomplete="off"
-                    />
+          </div>
+        </div>
+        <div id="terminal">
+          <a id="before"></a>
+        </div>
+        <div id="command" onclick="$('texter').focus();">
+          <input type="text" id="texter" class="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)" onkeypress="typeIt(this, event);"></input>
+          <div id="liner">
+            <span id="typer"></span><b class="cursor" id="cursor">█</b>
+          </div>
+        </div>
+        <footer class="md:pt-[11%] pt-[50%]">
+          <div
+            class="p-2  bg-[#061826a7] border-[#7AE0CA] border rounded-[4px] w-full md:w-max float-right relative bottom-4 ">
+            <div class="flex flex-row p-1">
+              <i class="fa-brands fa-spotify  animate-none md:animate-spin md:text-[5rem] text-[3rem] "
+                style="animation-duration: 12s;"></i>
+              <div class="">
+                <div class="flex md:flex-col flex-row pl-2 text-[15px] md:text-[17px]">Now Listening
+                  to......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="underline text-[15px] md:text-[17px]">
+                    <div class=”artist” id="track">Track: </div>
+                    <div class="text-[15px] md:text-[17px]"></div>
+                    <div class=”track” id="song">Artist: </div>
                   </div>
                 </div>
-        </div>
-      </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="./js/caret.js"></script>
+        <script src="./js/commands.js"></script>
+        <script src="./js/main.js"></script>
+</body>
 
-
-      </div>
-    </div>
-    
-  </body>
 </html>
