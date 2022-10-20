@@ -1,9 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,css}',
-    'index.html','main.css'],
+  content: [
+    "./src/**/*.{html,js,css}",
+    "index.html",
+    "main.css",
+    "js/commands.js",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      cursor: {
+        fancy: "url(AnyaCursor/pointer.gif), pointer",
+      },
+    },
   },
-  plugins: ["tailwindcss ,autoprefixer"],
+  plugins: ["tailwindcss ,autoprefixer ,typography ,line-clamp"],
 };
