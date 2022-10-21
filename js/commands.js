@@ -67,13 +67,20 @@ projects = [
 
 help = [
   `<br><pre class="whitespace-pre-wrap">
-  <span class="command">Aboutme</span>    Diplays Who I am?
-  <span class="command">social</span>     Lists social networks
-  <span class="command">projects</span>   View coding projects
-  <span class="command">history</span>    View command history
-  <span class="command">help</span>       Displays this help msg
-  <span class="command">email</span>      To send me a email
-  <span class="command">clear</span>      Clear terminal,</pre><br>`,
+  <span class="command">Aboutme</span>    
+   <span class="command">↳</span>&nbsp;Diplays Who I am?
+  <span class="command">social</span>     
+   <span class="command">↳</span>&nbsp;Lists social networks.
+  <span class="command">projects</span>   
+   <span class="command">↳</span>&nbsp;View coding projects.
+  <span class="command">history</span>    
+   <span class="command">↳</span>&nbsp;View command history.
+  <span class="command">help</span>       
+   <span class="command">↳</span>&nbsp;Displays this help msg.
+  <span class="command">email</span>      
+   <span class="command">↳</span>&nbsp;To send me a email.
+  <span class="command">clear</span>
+   <span class="command">↳</span>&nbsp;Clear terminal.</pre><br>`,
 ];
 banner = [
   `<div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div>`,
