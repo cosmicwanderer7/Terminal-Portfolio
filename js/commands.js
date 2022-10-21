@@ -76,5 +76,5 @@ help = [
   <span class="command">clear</span>      Clear terminal,</pre><br>`,
 ];
 banner = [
-  `<div class="pt-2"><span class="text-[#7275aebe] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div>`,
+  `<div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div>`,
 ];
