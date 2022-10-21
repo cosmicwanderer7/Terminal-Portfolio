@@ -913,8 +913,8 @@ video {
 .pr-\[0\.8rem\] {
   padding-right: 0.8rem;
 }
-.pt-\[11\%\] {
-  padding-top: 11%;
+.pt-\[50\%\] {
+  padding-top: 50%;
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -987,30 +987,6 @@ video {
 }
 .pb-6 {
   padding-bottom: 1.5rem;
-}
-.pt-\[\] {
-  padding-top: ;
-}
-.pt-\[15\] {
-  padding-top: 15;
-}
-.pt-\[15\%\] {
-  padding-top: 15%;
-}
-.pt-\[5\%\] {
-  padding-top: 5%;
-}
-.pt-\[25\%\] {
-  padding-top: 25%;
-}
-.pt-\[70\%\] {
-  padding-top: 70%;
-}
-.pt-\[\%\] {
-  padding-top: %;
-}
-.pt-\[50\%\] {
-  padding-top: 50%;
 }
 .text-center {
   text-align: center;
@@ -1532,4 +1508,5 @@ body {
     font-size: 17px;
   }
 }
+
 
