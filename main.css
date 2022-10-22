@@ -998,6 +998,12 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-\[17px\] {
+  font-size: 17px;
+}
+.text-\[18px\] {
+  font-size: 18px;
+}
 .text-\[3rem\] {
   font-size: 3rem;
 }
@@ -1225,7 +1231,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
  
 
   .ascii{
-      font-size: 7px;
+      font-size: 9.7px;
   }
 
 }
@@ -1517,6 +1523,10 @@ body {
 
   .md\:pt-\[11\%\] {
     padding-top: 11%;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
   }
 
   .md\:text-\[5rem\] {
