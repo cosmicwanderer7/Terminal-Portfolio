@@ -61,7 +61,28 @@ social = [
 
 projects = [
   "<br>",
-  "",
+  "<span class='underline'>Hey, I'm prithvi!👋</span>",
+  "<br>",
+
+  "<li>🔭 I’m currently a 3rd year undergrad, pursuing BSc.</li>",
+  "<li>🌱 My fields of intetest are</li>",
+  `<pre class="whitespace-pre-wrap">
+        - Fullstack Development
+        - UI/UX Designing</pre>`,
+  `<li><pre class="whitespace-pre-wrap">👯 I would love to work with anyone who wants to build a 
+   professional website for their business or even a personal 
+   website to showcase their portfolio.
+   I love learning new stuff and using it to improve my skills.
+   I primarily use NextJS and Tailwind CSS when building my 
+   websites (projects).
+   You can learn more about the projects that I have built using 
+   the project command.
+   You can browse around my website to find out more about 
+   me.
+   *Try using a social command.`,
+  `<li><pre class="whitespace-pre-wrap">👨‍💻 Check out my github profile to view my projects
+   *Use the github command to take a look at my GitHub profile.`,
+  `<li>📫 Contact me at <a href= "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs">yewaleprithvi2003@gmail.com</a>`,
   "<br>",
 ];
 
