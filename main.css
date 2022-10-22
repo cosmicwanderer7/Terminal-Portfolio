@@ -895,8 +895,8 @@ video {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
-.pt-4 {
-  padding-top: 1rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 .pb-9 {
   padding-bottom: 2.25rem;
@@ -916,8 +916,14 @@ video {
 .pr-\[0\.8rem\] {
   padding-right: 0.8rem;
 }
+.pl-\[1px\] {
+  padding-left: 1px;
+}
 .pt-\[50\%\] {
   padding-top: 50%;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -955,9 +961,6 @@ video {
 .pb-4 {
   padding-bottom: 1rem;
 }
-.pt-2 {
-  padding-top: 0.5rem;
-}
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -991,6 +994,69 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pl-\[1rem\] {
+  padding-left: 1rem;
+}
+.pl-\[2rem\] {
+  padding-left: 2rem;
+}
+.pl-\[1\.rem\] {
+  padding-left: 1.rem;
+}
+.pl-\[1\.5rem\] {
+  padding-left: 1.5rem;
+}
+.pl-\[1\.6rem\] {
+  padding-left: 1.6rem;
+}
+.pl-\[1\.7rem\] {
+  padding-left: 1.7rem;
+}
+.pl-\[1\.4rem\] {
+  padding-left: 1.4rem;
+}
+.pl-\[rem\] {
+  padding-left: rem;
+}
+.pl-\[0\.9rem\] {
+  padding-left: 0.9rem;
+}
+.pl-\[2\.6rem\] {
+  padding-left: 2.6rem;
+}
+.pl-\[2\.4rem\] {
+  padding-left: 2.4rem;
+}
+.pl-\[1\.9rem\] {
+  padding-left: 1.9rem;
+}
+.pl-\[1\.3rem\] {
+  padding-left: 1.3rem;
+}
+.pl-\[2\.rem\] {
+  padding-left: 2.rem;
+}
+.pl-\[2\.9rem\] {
+  padding-left: 2.9rem;
+}
+.pl-\[3\.5rem\] {
+  padding-left: 3.5rem;
+}
+.pl-\[3\.6rem\] {
+  padding-left: 3.6rem;
+}
+.pl-\[3\.7rem\] {
+  padding-left: 3.7rem;
+}
+.pl-\[3\.rem\] {
+  padding-left: 3.rem;
+}
+.pl-\[3\.9rem\] {
+  padding-left: 3.9rem;
+}
+.pl-\[4\.0rem\] {
+  padding-left: 4.0rem;
+}
 .text-center {
   text-align: center;
 }
@@ -998,21 +1064,21 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-\[17px\] {
-  font-size: 17px;
+.text-\[15px\] {
+  font-size: 15px;
 }
-.text-\[18px\] {
-  font-size: 18px;
+.text-\[14\.5px\] {
+  font-size: 14.5px;
 }
 .text-\[3rem\] {
   font-size: 3rem;
 }
-.text-\[15px\] {
-  font-size: 15px;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.text-\[15\.3px\] {
+  font-size: 15.3px;
 }
 .font-medium {
   font-weight: 500;
@@ -1231,7 +1297,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
  
 
   .ascii{
-      font-size: 9.7px;
+      font-size: 6.7px;
   }
 
 }
@@ -1525,8 +1591,8 @@ body {
     padding-top: 11%;
   }
 
-  .md\:text-\[18px\] {
-    font-size: 18px;
+  .md\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .md\:text-\[5rem\] {
