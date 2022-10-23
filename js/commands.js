@@ -30,6 +30,7 @@ aboutme = [
   `<li><pre class="whitespace-pre-wrap">👨‍💻 Check out my github profile to view my projects
    *Use the github command to take a look at my GitHub profile.`,
   `<li>📫 Contact me at <a href= "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs">yewaleprithvi2003@gmail.com</a>`,
+  
   "<br>",
 ];
 
