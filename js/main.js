@@ -99,7 +99,7 @@ function commander(cmd) {
       break;
     case "password":
       addLine(
-        "<span class=\"inherit\"> Lol! You're joking, right? You're gonna have to try harder than that!😂</span>",
+        "<span class=\"inherit\"> </span>",
         "error",
         100
       );
