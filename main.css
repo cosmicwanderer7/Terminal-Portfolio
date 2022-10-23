@@ -1098,9 +1098,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(117 225 231 / var(--tw-text-opacity));
 }
-.text-\[\#8285c1f0\] {
-  color: #8285c1f0;
-}
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;

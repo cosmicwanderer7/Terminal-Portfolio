@@ -10,7 +10,6 @@ aboutme = [
   "<br>",
   "<span class='underline'>Hey, I'm prithvi!👋</span>",
   "<br>",
-
   "<li>🔭 I’m currently a 3rd year undergrad, pursuing BSc.</li>",
   "<li>🌱 My fields of intetest are</li>",
   `<pre class="whitespace-pre-wrap">
@@ -30,7 +29,6 @@ aboutme = [
   `<li><pre class="whitespace-pre-wrap">👨‍💻 Check out my github profile to view my projects
    *Use the github command to take a look at my GitHub profile.`,
   `<li>📫 Contact me at <a href= "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs">yewaleprithvi2003@gmail.com</a>`,
-  
   "<br>",
 ];
 
