@@ -119,7 +119,8 @@ function commander(cmd) {
       break;
     case "clear":
       setTimeout(function () {
-        terminal.innerHTML = '<a id="before"></a>';
+        terminal.innerHTML =
+          '<a id="before"><div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div></a>';
         before = document.getElementById("before");
       }, 1);
       break;
