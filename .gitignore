@@ -2442,3 +2442,15 @@ node_modules/yargs-parser/build/lib/string-utils.js
 node_modules/yargs-parser/build/lib/tokenize-arg-string.js
 node_modules/yargs-parser/build/lib/yargs-parser-types.js
 node_modules/yargs-parser/build/lib/yargs-parser.js
+node_modules/@tailwindcss/line-clamp/LICENSE
+node_modules/@tailwindcss/line-clamp/CHANGELOG.md
+node_modules/@tailwindcss/line-clamp/README.md
+node_modules/@tailwindcss/line-clamp/.github/ISSUE_TEMPLATE/1.bug_report.yml
+node_modules/@tailwindcss/line-clamp/.github/ISSUE_TEMPLATE/config.yml
+node_modules/@tailwindcss/line-clamp/.github/workflows/nodejs.yml
+node_modules/@tailwindcss/line-clamp/.github/workflows/release-insiders.yml
+node_modules/@tailwindcss/line-clamp/jest/customMatchers.js
+node_modules/@tailwindcss/line-clamp/src/index.d.ts
+node_modules/@tailwindcss/line-clamp/src/index.js
+node_modules/@tailwindcss/line-clamp/src/index.test.js
+node_modules/@tailwindcss/line-clamp/package.json
