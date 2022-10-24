@@ -98,13 +98,13 @@ Built With
 
 help = [
   `<br><pre class="whitespace-pre-wrap">
-  <span class="command">Aboutme</span>    
+  <span class="command">aboutme</span>    
    <span class="command">↳</span>&nbsp;Diplays Who I am?
   <span class="command">social</span>     
    <span class="command">↳</span>&nbsp;Lists social networks.
   <span class="command">projects</span>   
    <span class="command">↳</span>&nbsp;View coding projects.
-    <span class="command">email</span>      
+  <span class="command">email</span>      
    <span class="command">↳</span>&nbsp;To send me a email.
   <span class="command">history</span>    
    <span class="command">↳</span>&nbsp;View command history.
