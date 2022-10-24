@@ -6,7 +6,6 @@ var terminal = document.getElementById("terminal");
 
 var git = 0;
 var pw = false;
-let pwd = false;
 var commands = [];
 
 setTimeout(function () {
@@ -25,28 +24,7 @@ function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
   }
-  if (pw) {
-    let et = "*";
-    let w = textarea.value.length;
-    command.innerHTML = et.repeat(w);
-    if (textarea.value === password) {
-      pwd = true;
-    }
-    if (pwd && e.keyCode == 13) {
-      loopLines(secret, "color2 margin", 120);
-      command.innerHTML = "";
-      textarea.value = "";
-      pwd = false;
-      pw = false;
-      liner.classList.remove("password");
-    } else if (e.keyCode == 13) {
-      addLine("Wrong password", "error", 0);
-      command.innerHTML = "";
-      textarea.value = "";
-      pw = false;
-      liner.classList.remove("password");
-    }
-  } else {
+ 
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
@@ -74,7 +52,7 @@ function enterKey(e) {
       command.innerHTML = textarea.value;
     }
   }
-}
+
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
@@ -85,7 +63,7 @@ function commander(cmd) {
       loopLines(aboutme, "color2 margin", 80);
       break;
     
-    case "video":
+    case "DEV":
       addLine("Opening Dev.to...", "color2", 80);
       newTab(Dev);
       break;
@@ -97,14 +75,7 @@ function commander(cmd) {
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;
-    case "password":
-      addLine(
-        "<span class=\"inherit\"> </span>",
-        "error",
-        100
-      );
-      break;
-    case "history":
+   case "history":
       addLine("<br>", "", 0);
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);

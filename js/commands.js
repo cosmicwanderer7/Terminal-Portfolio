@@ -32,7 +32,6 @@ aboutme = [
   "<br>",
 ];
 
-
 social = [
   "<br>",
   'dev        <a href="' +
@@ -105,12 +104,12 @@ help = [
    <span class="command">↳</span>&nbsp;Lists social networks.
   <span class="command">projects</span>   
    <span class="command">↳</span>&nbsp;View coding projects.
+    <span class="command">email</span>      
+   <span class="command">↳</span>&nbsp;To send me a email.
   <span class="command">history</span>    
    <span class="command">↳</span>&nbsp;View command history.
   <span class="command">help</span>       
    <span class="command">↳</span>&nbsp;Displays this help msg.
-  <span class="command">email</span>      
-   <span class="command">↳</span>&nbsp;To send me a email.
   <span class="command">clear</span>
    <span class="command">↳</span>&nbsp;Clear terminal.</pre><br>`,
 ];
