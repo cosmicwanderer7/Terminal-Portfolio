@@ -35,7 +35,7 @@ aboutme = [
 
 social = [
   "<br>",
-  'dev.to        <a href="' +
+  'dev        <a href="' +
     dev +
     '" target="_blank">dev.to/cosmicwanderer7' +
     "</a>",
