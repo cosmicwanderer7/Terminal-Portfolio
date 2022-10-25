@@ -15,7 +15,6 @@ setTimeout(function () {
 
 window.addEventListener("keyup", enterKey);
 
-
 //init
 textarea.value = "";
 command.innerHTML = textarea.value;
@@ -24,35 +23,30 @@ function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
   }
- 
-    if (e.keyCode == 13) {
-      commands.push(command.innerHTML);
-      git = commands.length;
-      addLine(
-        "prithvi@vaio-VPCCW16FG:~$" + command.innerHTML,
-        "no-animation",
-        0
-      );
-      commander(command.innerHTML.toLowerCase());
-      command.innerHTML = "";
-      textarea.value = "";
-    }
-    if (e.keyCode == 38 && git != 0) {
-      git -= 1;
-      textarea.value = commands[git];
-      command.innerHTML = textarea.value;
-    }
-    if (e.keyCode == 40 && git != commands.length) {
-      git += 1;
-      if (commands[git] === undefined) {
-        textarea.value = "";
-      } else {
-        textarea.value = commands[git];
-      }
-      command.innerHTML = textarea.value;
-    }
-  }
 
+  if (e.keyCode == 13) {
+    commands.push(command.innerHTML);
+    git = commands.length;
+    addLine("prithvi@vaio-VPCCW16FG:~$" + command.innerHTML, "no-animation", 0);
+    commander(command.innerHTML.toLowerCase());
+    command.innerHTML = "";
+    textarea.value = "";
+  }
+  if (e.keyCode == 38 && git != 0) {
+    git -= 1;
+    textarea.value = commands[git];
+    command.innerHTML = textarea.value;
+  }
+  if (e.keyCode == 40 && git != commands.length) {
+    git += 1;
+    if (commands[git] === undefined) {
+      textarea.value = "";
+    } else {
+      textarea.value = commands[git];
+    }
+    command.innerHTML = textarea.value;
+  }
+}
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
@@ -62,12 +56,12 @@ function commander(cmd) {
     case "aboutme":
       loopLines(aboutme, "color2 margin", 80);
       break;
-    
+
     case "DEV":
       addLine("Opening Dev.to...", "color2", 80);
       newTab(Dev);
       break;
-   
+
     case "social":
       loopLines(social, "color2 margin", 80);
       break;
@@ -75,7 +69,7 @@ function commander(cmd) {
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;
-   case "history":
+    case "history":
       addLine("<br>", "", 0);
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
@@ -131,7 +125,7 @@ function commander(cmd) {
 
 function newTab(link) {
   setTimeout(function () {
-    window.open(link, "_blank");
+    window.open(link, "blank");
   }, 500);
 }
 

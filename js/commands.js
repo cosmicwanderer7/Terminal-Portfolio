@@ -36,34 +36,34 @@ social = [
   "<br>",
   'dev        <a href="' +
     dev +
-    '" target="_blank">dev.to/cosmicwanderer7' +
+    '" target="blank">dev.to/cosmicwanderer7' +
     "</a>",
   'twitter        <a href="' +
     twitter +
-    '" target="_blank">twitter.com/PrithviYewale' +
+    '" target="blank">twitter.com/PrithviYewale' +
     "</a>",
   'linkedin       <a href="' +
     linkedin +
-    '" target="_blank">linkedin/prithviYewale' +
+    '" target="blank">linkedin/prithviYewale' +
     "</a>",
   'instagram      <a href="' +
     instagram +
-    '" target="_blank">instagram/prithvi_yewale' +
+    '" target="blank">instagram/prithvi_yewale' +
     "</a>",
   'github         <a href="' +
     github +
-    '" target="_blank">github/cosmicwanderer7' +
+    '" target="blank">github/cosmicwanderer7' +
     "</a>",
   "<br>",
 ];
 
 projects = [
   "<br>",
-  `<a href="https://github.com/cosmicwanderer7/google-clone" target="_blank"><span class='underline'>Google Search Clone</span>`,
+  `<a href="https://github.com/cosmicwanderer7/google-clone" target="blank"><span class='underline'>Google Search Clone</span>`,
   "<br>",
   `<pre class="indent-8 whitespace-pre-wrap">A functional replica of Google's search page, you can use it for searches. Styled with Tailwind CSS to Rapidly build and look as close as possible to current google search page, the search results are pulled using Googles Programmable Search Engine and it was build using Next.js the react framework.
 
-Project is live here <a href="https://google-clone-p8mn37r8a-cosmicwanderer7.vercel.app/" target="_blank">https://google-clone-cosmicwanderer7.vercel.app/</a>
+Project is live here <a href="https://google-clone-p8mn37r8a-cosmicwanderer7.vercel.app/" target="blank">https://google-clone-cosmicwanderer7.vercel.app/</a>
 *Please do not spam searches.
 
 Built With
@@ -76,13 +76,13 @@ Built With
 
   "<br>",
 
-  `<a href="https://github.com/cosmicwanderer7/contactform" target="_blank"><span class='underline'>Contactform With Google Sheets as Database</span>`,
+  `<a href="https://github.com/cosmicwanderer7/contactform" target="blank"><span class='underline'>Contactform With Google Sheets as Database</span>`,
   "<br>",
   `<pre class="indent-8 whitespace-pre-wrap">This contact form collects information from the user and saves it to Google Sheets using the Google cloud APIs.
 After filling out the form, the user will receive a personalized email with a link to the form that says their response has been recorded. 
 It was built using Next.JS, the React framework and styled with Tailwind CSS.
 
-Project is live here <a href="https://contactform-psi.vercel.app/" target="_blank">https://contactform-psi.vercel.app/</a>
+Project is live here <a href="https://contactform-psi.vercel.app/" target="blank">https://contactform-psi.vercel.app/</a>
 
 Built With
 
