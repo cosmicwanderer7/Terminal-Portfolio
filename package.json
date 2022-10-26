@@ -16,6 +16,8 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.4.2"
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "add": "^2.0.6",
+    "process-env": "^2.0.2"
   }
 }
