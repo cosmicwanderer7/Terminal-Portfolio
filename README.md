@@ -41,6 +41,6 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
   yewaleprithvi2003@gmail.com Gmail <br>
  [@PrithviYewale](https://twitter.com/PrithviYewale) Twitter <br>
- [@cosmic.wanderer._](https://www.instagram.com/cosmic.wanderer._/) Instagram <br>
+ [@prithvi_yewale](https://www.instagram.com/prithvi_yewale) Instagram <br>
  
                     
