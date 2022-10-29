@@ -1,5 +1,5 @@
 # portfolio
  A Terminal Portfolio. 
 
-https://user-images.githubusercontent.com/65147258/198689349-0593e01e-9258-4130-80e2-e8527173bed0.mp4
+https://user-images.githubusercontent.com/65147258/198769922-34d17b3f-f8bc-457c-863f-5d085fb24f41.mp4
 
