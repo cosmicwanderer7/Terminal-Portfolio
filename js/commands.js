@@ -3,7 +3,8 @@ var twitter = "https://twitter.com/PrithviYewale";
 var linkedin = "https://www.linkedin.com/in/prithvi-yewale-a77275228/";
 var instagram = "https://www.instagram.com/prithvi_yewale/";
 var github = "https://github.com/cosmicwanderer7";
-var email =
+var sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+var email = 
   "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs";
 
 aboutme = [
@@ -53,6 +54,10 @@ social = [
   'github         <a href="' +
     github +
     '" target="blank">github/cosmicwanderer7' +
+    "</a>",
+  'sudo         <a href="' +
+    sudo +
+    '" target="blank">youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1' +
     "</a>",
   "<br>",
 ];
@@ -110,6 +115,8 @@ help = [
    <span class="command">↳</span>&nbsp;View command history.
   <span class="command">help</span>       
    <span class="command">↳</span>&nbsp;Displays this help msg.
+  <span class="command">sudo</span>       
+   <span class="command">↳</span>&nbsp;Try it out for yourself.
   <span class="command">clear</span>
    <span class="command">↳</span>&nbsp;Clear terminal.</pre><br>`,
 ];

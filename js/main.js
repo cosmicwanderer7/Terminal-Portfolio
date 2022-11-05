@@ -62,12 +62,12 @@ function commander(cmd) {
     case "aboutme":
       loopLines(aboutme, "color2 margin", 80);
       break;
-    
+
     case "DEV":
       addLine("Opening Dev.to...", "color2", 80);
       newTab(Dev);
       break;
-   
+
     case "social":
       loopLines(social, "color2 margin", 80);
       break;
@@ -75,7 +75,7 @@ function commander(cmd) {
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;
-   case "history":
+    case "history":
       addLine("<br>", "", 0);
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
@@ -118,6 +118,10 @@ function commander(cmd) {
     case "github":
       addLine("Opening GitHub...", "color2", 0);
       newTab(github);
+      break;
+    case "sudo":
+      addLine("Oh no, you're not an admin...", "color2", 0);
+      newTab(sudo);
       break;
     default:
       addLine(
