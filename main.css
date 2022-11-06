@@ -1463,7 +1463,9 @@ body {
   min-height: 99%;
   width: 100%;
   color: #519975;
-
+  -webkit-text-size-adjust: auto;
+     -moz-text-size-adjust: auto;
+          text-size-adjust: auto;
 }
 
 .hover\:text-pink-800:hover {
@@ -1527,5 +1529,6 @@ body {
     font-size: 17px;
   }
 }
+
 
 
