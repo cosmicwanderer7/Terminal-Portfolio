@@ -819,6 +819,9 @@ video {
 .overscroll-auto {
   overscroll-behavior: auto;
 }
+.overscroll-contain {
+  overscroll-behavior: contain;
+}
 .whitespace-pre-wrap {
   white-space: pre-wrap;
 }
@@ -1450,6 +1453,7 @@ a {
 a {
   text-decoration: inherit;
 }
+
 a:hover {
   background: #73ABAD;
   color: #211830;
