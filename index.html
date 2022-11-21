@@ -47,10 +47,10 @@
   <title>Prithvi Sanjay Yewale</title>
 </head>
 
-<body style="font-family: 'Ubuntu', sans-serif;" class="overscroll-contain">
+<body style="font-family: 'Ubuntu', sans-serif;" class="overflow-y-scroll bg-cover ">
   <div class="m-2 relative" onclick="document.getElementById('texter').focus();">
     <div
-      class="ring-1 ring-purple-500 bg-[#081d2dcd] border-[#7AE0CA] border  rounded-[4px] shadow-xl shadow-[#1d1e1fb4] min-h-[98vh] resize overflow-hidden ">
+      class="ring-1 ring-purple-500 bg-[#081d2dcd] border-[#7AE0CA] border backdrop-blur-sm rounded-[4px] shadow-xl shadow-[#1d1e1fb4] min-h-[98vh] resize overflow-hidden ">
 
       <header>
         <p class="p-2 text-center text-slate-400">
@@ -118,7 +118,8 @@
           <input type="text" id="texter" class="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
                    moveIt(this.value.length, event)" onkeypress="typeIt(this, event);"></input>
           <div id="liner">
-            <span id="typer"></span><b class="cursor" id="cursor">█</b>
+            <span id="typer"></span><b class="cursor" id="cursor">█</b><div class="list"></div>
+      
           </div>
         </div>
         <footer class="md:pt-[11%] pt-[50%]">
@@ -143,6 +144,7 @@
         <script src="./js/caret.js"></script>
         <script src="./js/commands.js"></script>
         <script src="./js/main.js"></script>
+        
 </body>
 
 </html>

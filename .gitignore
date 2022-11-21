@@ -2488,3 +2488,4 @@ node_modules/add/bower.json
 node_modules/add/.travis.yml
 node_modules/add/.npmignore
 tailwind.css
+.vscode/settings.json

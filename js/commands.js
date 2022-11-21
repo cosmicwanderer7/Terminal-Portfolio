@@ -55,10 +55,7 @@ social = [
     github +
     '" target="blank">github/cosmicwanderer7' +
     "</a>",
-  'sudo         <a href="' +
-    sudo +
-    '" target="blank">youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1' +
-    "</a>",
+  
   "<br>",
 ];
 
