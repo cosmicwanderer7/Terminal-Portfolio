@@ -885,6 +885,10 @@ video {
 .bg-cover {
   background-size: cover;
 }
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
 .object-scale-down {
   -o-object-fit: scale-down;
      object-fit: scale-down;
@@ -1046,8 +1050,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
-.text-\[\#8de2d0e9\] {
-  color: #8de2d0e9;
+.text-\[\#8de2d0ac\] {
+  color: #8de2d0ac;
 }
 .text-\[\#7AE0CA\] {
   --tw-text-opacity: 1;
@@ -1109,15 +1113,15 @@ video {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
+.text-transparent {
+  color: transparent;
+}
 .text-\[\#7d82d7db\] {
   color: #7d82d7db;
 }
 .text-\[\#75e1e7\] {
   --tw-text-opacity: 1;
   color: rgb(117 225 231 / var(--tw-text-opacity));
-}
-.text-\[\#8de2d0ac\] {
-  color: #8de2d0ac;
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1480,26 +1484,26 @@ body {
   min-height: 99%;
   width: 100%;
   color: #519975;
- 
-  -webkit-text-size-adjust: auto;
- 
-     -moz-text-size-adjust: auto;
- 
-          text-size-adjust: auto;
+   -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  
   	overflow-x: hidden;
     
 }
-
+html{
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  }
 .hover\:text-pink-800:hover {
   --tw-text-opacity: 1;
   color: rgb(157 23 77 / var(--tw-text-opacity));
 }
-
 .hover\:text-red-500:hover {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
-
 @media (min-width: 768px) {
 
   .md\:w-max {
@@ -1551,6 +1555,5 @@ body {
     font-size: 17px;
   }
 }
-
 
 
