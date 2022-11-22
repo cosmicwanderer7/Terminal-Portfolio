@@ -1244,96 +1244,63 @@ video {
   transition-duration: 1000ms;
 }
 
-
 body {
-   
-  
-     background-color: #4a2c4f;
-background-image: url("assets/438198.gif")   
+  background-color: #4a2c4f;
+  background-image: url("assets/438198.gif");
+}
+@media only screen and (min-width: 360px) {
+  .ascii {
+    font-size: 10px;
   }
-@media only screen and (min-width: 360px){
- 
-
-  .ascii{
-      font-size: 10px;
-  }
-
 }
 
-@media only screen and (min-width: 375px){
- 
-
-  .ascii{
-      font-size: 10px;
+@media only screen and (min-width: 375px) {
+  .ascii {
+    font-size: 10px;
   }
-
 }
 
-@media only screen and (min-width: 413px){
- 
-
-  .ascii{
-      font-size: 12px;
+@media only screen and (min-width: 413px) {
+  .ascii {
+    font-size: 12px;
   }
-
 }
 
-@media only screen and (min-width: 522px){
- 
-
-  .ascii{
-      font-size: 15px;
+@media only screen and (min-width: 522px) {
+  .ascii {
+    font-size: 15px;
   }
-
 }
 
-@media only screen and (min-width: 591px){
- 
-
-  .ascii{
-      font-size: 18px;
+@media only screen and (min-width: 591px) {
+  .ascii {
+    font-size: 18px;
   }
-
 }
 
-@media only screen and (min-width: 621px){
- 
-
-  .ascii{
-      font-size: 19px;
+@media only screen and (min-width: 621px) {
+  .ascii {
+    font-size: 19px;
   }
-
 }
 
-
-@media only screen and (min-width: 810px){
- 
-
-  .ascii{
-      font-size: 17px;
+@media only screen and (min-width: 810px) {
+  .ascii {
+    font-size: 17px;
   }
-
 }
 
-@media only screen and (min-width: 815px){
- 
-
-  .ascii{
-      font-size: 19px;
+@media only screen and (min-width: 815px) {
+  .ascii {
+    font-size: 19px;
   }
-
 }
 
-
-@media only screen and (min-width: 1024px){
- 
-
-  .ascii{
-      font-size: 20px;
+@media only screen and (min-width: 1024px) {
+  .ascii {
+    font-size: 20px;
   }
-
 }
-
 
 .texter {
   opacity: 0;
@@ -1342,13 +1309,11 @@ background-image: url("assets/438198.gif")
   position: absolute;
 }
 
-
 @-webkit-keyframes blink {
   50% {
     opacity: 0;
   }
 }
-
 
 @keyframes blink {
   50% {
@@ -1362,8 +1327,8 @@ background-image: url("assets/438198.gif")
 
 .cursor {
   font-size: 12px;
-  color: #73ABAD;
-  background-color: #73ABAD;
+  color: #73abad;
+  background-color: #73abad;
   position: relative;
   opacity: 1;
   height: 1.5em;
@@ -1390,7 +1355,7 @@ background-image: url("assets/438198.gif")
 #command {
   cursor: text;
   height: 50px;
-  color: #73ABAD;
+  color: #73abad;
 }
 #liner {
   line-height: 1.3em;
@@ -1435,7 +1400,8 @@ background-image: url("assets/438198.gif")
   from {
     width: 0;
   }
-  to {  cursor: url(https://www.w3schools.com/images/compatible_chrome.png);
+  to {
+    cursor: url(https://www.w3schools.com/images/compatible_chrome.png);
     width: 100%;
   }
 }
@@ -1443,36 +1409,37 @@ background-image: url("assets/438198.gif")
   from {
     width: 0;
   }
-  to {  cursor: url(https://www.w3schools.com/images/compatible_chrome.png);
+  to {
+    cursor: url(https://www.w3schools.com/images/compatible_chrome.png);
     width: 100%;
   }
 }
 .index {
-  color: #DCDCCC;
+  color: #dcdccc;
 }
 .color2 {
   color: #8285c1f0;
 }
 .command {
-  color: #73ABAD;
-  text-shadow: 0 0 5px #73ABAD; 
+  color: #73abad;
+  text-shadow: 0 0 5px #73abad;
 }
 .error {
   color: #6d71b9d9;
 }
 .white {
-  color: #fff; 
+  color: #fff;
 }
 .inherit,
 a {
-  color: #73ABAD;
+  color: #73abad;
 }
 a {
   text-decoration: inherit;
 }
 
 a:hover {
-  background: #73ABAD;
+  background: #73abad;
   color: #211830;
 }
 a:focus {
@@ -1484,18 +1451,16 @@ body {
   min-height: 99%;
   width: 100%;
   color: #519975;
-   -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  
-  	overflow-x: hidden;
-    
-}
-html{
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  }
+  overflow-x: hidden;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
 .hover\:text-pink-800:hover {
   --tw-text-opacity: 1;
   color: rgb(157 23 77 / var(--tw-text-opacity));
@@ -1555,5 +1520,3 @@ html{
     font-size: 17px;
   }
 }
-
-
