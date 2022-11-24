@@ -4,8 +4,7 @@ var linkedin = "https://www.linkedin.com/in/prithvi-yewale-a77275228/";
 var instagram = "https://www.instagram.com/prithvi_yewale/";
 var github = "https://github.com/cosmicwanderer7";
 var sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-var email = 
-  "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs";
+var email = "mailto:yewaleprithvi2003@gmail.com";
 
 aboutme = [
   "<br>",

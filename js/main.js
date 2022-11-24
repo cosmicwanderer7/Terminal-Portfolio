@@ -82,10 +82,12 @@ function commander(cmd) {
       break;
     case "email":
       addLine(
-        'Opening mailto:<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDPFDTbvhjVpvjpNxLZPjFdzKFcmqZGNHclhwtJKhdhrBqGNVGBzlPvFfwxvksdTcqHXs">yewaleprithvi2003@gmail.com</a>...',
+        'Opening mailto:<a href="mailto:yewaleprithvi2003@gmail.com"> yewaleprithvi2003@gmail.com</a>...',
         "color2",
         80
       );
+      newTab(email);
+      break;
       newTab(email);
       break;
     case "clear":

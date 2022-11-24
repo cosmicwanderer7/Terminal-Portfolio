@@ -1247,10 +1247,18 @@ video {
 body {
   background-color: #4a2c4f;
   background-image: url("assets/438198.gif");
+    margin: 0;
+  min-height: 99%;
+  width: 100%;
+  color: #519975;
+  -moz-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
+  overflow-x: hidden;
 }
 @media only screen and (min-width: 360px) {
   .ascii {
-    font-size: 10px;
+    font-size:9px;
   }
 }
 
@@ -1445,22 +1453,6 @@ a:hover {
 a:focus {
   outline: 0;
 }
-
-body {
-  margin: 0;
-  min-height: 99%;
-  width: 100%;
-  color: #519975;
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  overflow-x: hidden;
-}
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
 .hover\:text-pink-800:hover {
   --tw-text-opacity: 1;
   color: rgb(157 23 77 / var(--tw-text-opacity));
@@ -1520,3 +1512,6 @@ html {
     font-size: 17px;
   }
 }
+
+
+
