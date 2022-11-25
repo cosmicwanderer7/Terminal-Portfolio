@@ -1329,9 +1329,7 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
+::-webkit-scrollbar-button
 
 .cursor {
   font-size: 12px;
