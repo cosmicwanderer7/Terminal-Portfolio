@@ -33,9 +33,12 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
+## Creative Commons licenses
 
+![by-sa](https://user-images.githubusercontent.com/65147258/209966249-88275ba5-75a3-4a4e-af1c-7d861c5cf838.png)
 
-
+Terminal-styled portfolio by Prithvi Yewale is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+Based on a work at https://github.com/cosmicwanderer7/portfolio.
 
 <!-- CONTACT -->
 ## Contact
