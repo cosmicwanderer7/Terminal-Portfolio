@@ -29,7 +29,7 @@ function enterKey(e) {
       commands.push(command.innerHTML);
       git = commands.length;
       addLine(
-        "[prithvi@archrx5500m]$" + command.innerHTML,
+        "[prithvi@archrx5500m]~$" + command.innerHTML,
         "no-animation",
         0
       );
