@@ -871,6 +871,9 @@ video {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
 .pb-9 {
   padding-bottom: 2.25rem;
 }
@@ -954,21 +957,6 @@ video {
 }
 .pt-\[50\%\] {
   padding-top: 50%;
-}
-.pt-\[100\%\] {
-  padding-top: 100%;
-}
-.pt-\[125\%\] {
-  padding-top: 125%;
-}
-.pt-\[25\%\] {
-  padding-top: 25%;
-}
-.pt-\[2\%\] {
-  padding-top: 2%;
-}
-.pt-\[26\%\] {
-  padding-top: 26%;
 }
 .text-center {
   text-align: center;
@@ -1220,25 +1208,25 @@ b {
 
 @media only screen and (min-width: 360px) {
   .ascii {
-    font-size:10px;
+    font-size:16px;
   }
 }
 
 @media only screen and (min-width: 375px) {
   .ascii {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 413px) {
   .ascii {
-    font-size: 13px;
+    font-size: 17px;
   }
 }
 
 @media only screen and (min-width: 522px) {
   .ascii {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -1408,12 +1396,8 @@ a:focus {
     flex-direction: column;
   }
 
-  .md\:pt-\[11\%\] {
-    padding-top: 11%;
-  }
-
-  .md\:pt-\[100\%\] {
-    padding-top: 100%;
+  .md\:pt-\[26\%\] {
+    padding-top: 26%;
   }
 
   .md\:text-\[16px\] {
