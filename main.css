@@ -144,7 +144,7 @@ sup {
 }
 
 /*
-1. Remove text indentation from table contents irn Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 3. Remove gaps between table borders by default.
 */
@@ -770,9 +770,6 @@ video {
 .break-words {
   overflow-wrap: break-word;
 }
-.rounded-\[4px\] {
-  border-radius: 4px;
-}
 .rounded-\[2px\] {
   border-radius: 2px;
 }
@@ -970,8 +967,11 @@ video {
 .indent-8 {
   text-indent: 2rem;
 }
-.text-\[14\.5px\] {
-  font-size: 14.5px;
+.text-\[1\.1rem\] {
+  font-size: 1.1rem;
+}
+.text-\[14\.8px\] {
+  font-size: 14.8px;
 }
 .text-\[15\.3px\] {
   font-size: 15.3px;
@@ -989,9 +989,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[14\.8px\] {
-  font-size: 14.8px;
 }
 .font-medium {
   font-weight: 500;
@@ -1079,9 +1076,6 @@ video {
 }
 .text-transparent {
   color: transparent;
-}
-.text-\[px\] {
-  color: px;
 }
 .underline {
   text-decoration-line: underline;
@@ -1220,43 +1214,43 @@ b {
 
 @media only screen and (min-width: 360px) {
   .ascii {
-    font-size:16px;
+    font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 375px) {
   .ascii {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 413px) {
   .ascii {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 522px) {
   .ascii {
-    font-size: 17px;
+    font-size: 21px;
   }
 }
 
 @media only screen and (min-width: 591px) {
   .ascii {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 621px) {
   .ascii {
-    font-size: 18.5px;
+    font-size: 23px;
   }
 }
 
 @media only screen and (min-width: 810px) {
   .ascii {
-    font-size: 17px;
+    font-size: 24px;
   }
 }
 
@@ -1424,7 +1418,6 @@ a:focus {
     font-size: 5rem;
   }
 }
-
 
 
 
