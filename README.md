@@ -2,10 +2,10 @@
  A Terminal Portfolio. 
  Project is live www.prithviyewale.tech
 
+![Screenshot 2023-04-19 at 15-08-36 Prithvi Sanjay Yewale](https://user-images.githubusercontent.com/65147258/233828950-b723ed5d-f36f-4829-bbf9-05bec1c5d78c.png)
 
 https://user-images.githubusercontent.com/65147258/198769922-34d17b3f-f8bc-457c-863f-5d085fb24f41.mp4
 
-![Screenshot 2023-04-19 at 15-08-36 Prithvi Sanjay Yewale](https://user-images.githubusercontent.com/65147258/233828950-b723ed5d-f36f-4829-bbf9-05bec1c5d78c.png)
 
 
 ### Built With
