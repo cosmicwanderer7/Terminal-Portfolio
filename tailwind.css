@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #4a2c4f;
+  background-image: url("assets/438198.gif");
+    margin: 0;
+  min-height: 99%;
+  width: 100%;
+  color: #519975;
+  -moz-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
+  overflow-x: hidden;
+}
+b {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 360px) {
+  .ascii {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .ascii {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 413px) {
+  .ascii {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 522px) {
+  .ascii {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 591px) {
+  .ascii {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 621px) {
+  .ascii {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .ascii {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 815px) {
+  .ascii {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ascii {
+    font-size: 40px;
+  }
+}
+
+.texter {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  left: -1000px;
+  position: absolute;
+}
+
+
+
+.cursor {
+  font-size: 12px;
+  color: #73ABAD;
+  background-color: #73ABAD;
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#command {
+  cursor: text;
+  height: 50px;
+  color: #73ABAD;
+}
+#liner {
+  line-height: 1.3em;
+  margin-top: -2px;
+  animation: show 0.5s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+#liner::before {
+  color: #519975;
+  content: "[prithvi@archrx5500m]~$";
+}
+#liner.password::before {
+  content: "Password:";
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Cursor End */
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+.index {
+  color: #dcdccc;
+}
+.color2 {
+  color: #8285c1f0;
+}
+.command {
+  color: #73abad;
+  text-shadow: 0 0 5px #73abad;
+}
+.error {
+  color: #6d71b9d9;
+}
+.white {
+  color: #fff;
+}
+.inherit,
+a {
+  color: #73abad;
+}
+a {
+  text-decoration: inherit;
+}
+
+a:hover {
+  background: #73abad;
+  color: #211830;
+}
+a:focus {
+  outline: 0;
+}
+
+
+
