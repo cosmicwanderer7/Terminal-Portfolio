@@ -1221,13 +1221,13 @@ b {
 
 @media only screen and (min-width: 360px) {
   .ascii {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
 @media only screen and (min-width: 375px) {
   .ascii {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -1275,6 +1275,9 @@ b {
 
 .ascii{
  /* prevent font boosting on mobile devices */
+ font-family: system-ui, "Apple Color Emoji", "Segoe UI Emoji",
+ "Segoe UI Symbol", "Noto Color Emoji";
+
  width: auto;
  height: auto;
  min-height: 1px;
