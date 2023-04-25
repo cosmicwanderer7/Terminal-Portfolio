@@ -1274,8 +1274,11 @@ b {
 }
 
 .ascii{
-  min-height: 1px;
-  max-height: 999999px;
+ /* prevent font boosting on mobile devices */
+ width: auto;
+ height: auto;
+ min-height: 1px;
+ max-height: 999999px;
 }
 
 .texter {
