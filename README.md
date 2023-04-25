@@ -2,13 +2,14 @@
  A Terminal Portfolio. 
  Project is live www.prithviyewale.tech
 
-![App Screenshot](https://user-images.githubusercontent.com/65147258/233828950-b723ed5d-f36f-4829-bbf9-05bec1c5d78c.png)
+![App Screenshot](https://user-images.githubusercontent.com/65147258/234175032-1f420e27-601a-42de-a2a7-7dd862adbe98.png)
 
 https://user-images.githubusercontent.com/65147258/198769922-34d17b3f-f8bc-457c-863f-5d085fb24f41.mp4
 
 
 
 ### Built With
+
 
 
 * [Html5](https://developer.mozilla.org/en-US/docs/Web/HTML)
