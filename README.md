@@ -2,10 +2,9 @@
  A Terminal Portfolio. 
  Project is live www.prithviyewale.tech
 
-![App Screenshot](https://user-images.githubusercontent.com/65147258/234175032-1f420e27-601a-42de-a2a7-7dd862adbe98.png)
+![App Screenshot](https://user-images.githubusercontent.com/65147258/234175185-93297c6a-c9bf-4cf1-83a5-d3e1f0156d73.png)
 
 https://user-images.githubusercontent.com/65147258/198769922-34d17b3f-f8bc-457c-863f-5d085fb24f41.mp4
-
 
 
 ### Built With
