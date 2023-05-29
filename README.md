@@ -4,7 +4,8 @@
 
 ![App Screenshot](https://user-images.githubusercontent.com/65147258/234175185-93297c6a-c9bf-4cf1-83a5-d3e1f0156d73.png)
 
-https://user-images.githubusercontent.com/65147258/198769922-34d17b3f-f8bc-457c-863f-5d085fb24f41.mp4
+https://github.com/cosmicwanderer7/Terminal-Portfolio/assets/65147258/3551cdc0-d79e-4300-89a6-1424831366f8
+
 
 
 ### Built With
