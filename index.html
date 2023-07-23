@@ -146,7 +146,19 @@ href="#" property="cc:attributionName" rel="cc:attributionURL">Prithvi Yewale</a
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 <br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/cosmicwanderer7/portfolio"
           rel="dct:source">github.com/cosmicwanderer7/portfolio</a></div></div>                                     
-                                                
+           <script>
+    // Function to check if the specific key combination is pressed
+    function checkKeyCombination(event) {
+      // Check if "Ctrl", "Alt", and "F7" keys are pressed
+      if (event.ctrlKey && event.altKey && event.key === "F7") {
+        // Redirect to the desired page
+        window.location.href = "https://www.example.com"; // Replace with the URL of the page you want to load
+      }
+    }
+
+    // Event listener to detect key press
+    document.addEventListener("keydown", checkKeyCombination);
+  </script>                                      
         <script src="./js/caret.js"></script>
         <script src="./js/commands.js"></script>
         <script src="./js/main.js"></script>
