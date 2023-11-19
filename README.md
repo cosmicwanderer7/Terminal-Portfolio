@@ -1,6 +1,6 @@
 ## About The Project
  A Terminal Portfolio. 
- Project is live www.prithviyewale.tech
+ Project is live www.webprithviyewale.tech
 
 ![App Screenshot](https://user-images.githubusercontent.com/65147258/234175185-93297c6a-c9bf-4cf1-83a5-d3e1f0156d73.png)
 
