@@ -15,7 +15,6 @@ setTimeout(function () {
 
 window.addEventListener("keyup", enterKey);
 
-
 //init
 textarea.value = "";
 command.innerHTML = textarea.value;
@@ -24,35 +23,30 @@ function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
   }
- 
-    if (e.keyCode == 13) {
-      commands.push(command.innerHTML);
-      git = commands.length;
-      addLine(
-        "[prithvi@archrx5500m]~$" + command.innerHTML,
-        "no-animation",
-        0
-      );
-      commander(command.innerHTML.toLowerCase());
-      command.innerHTML = "";
-      textarea.value = "";
-    }
-    if (e.keyCode == 38 && git != 0) {
-      git -= 1;
-      textarea.value = commands[git];
-      command.innerHTML = textarea.value;
-    }
-    if (e.keyCode == 40 && git != commands.length) {
-      git += 1;
-      if (commands[git] === undefined) {
-        textarea.value = "";
-      } else {
-        textarea.value = commands[git];
-      }
-      command.innerHTML = textarea.value;
-    }
-  }
 
+  if (e.keyCode == 13) {
+    commands.push(command.innerHTML);
+    git = commands.length;
+    addLine("[prithvi@archrx5500m]~$" + command.innerHTML, "no-animation", 0);
+    commander(command.innerHTML.toLowerCase());
+    command.innerHTML = "";
+    textarea.value = "";
+  }
+  if (e.keyCode == 38 && git != 0) {
+    git -= 1;
+    textarea.value = commands[git];
+    command.innerHTML = textarea.value;
+  }
+  if (e.keyCode == 40 && git != commands.length) {
+    git += 1;
+    if (commands[git] === undefined) {
+      textarea.value = "";
+    } else {
+      textarea.value = commands[git];
+    }
+    command.innerHTML = textarea.value;
+  }
+}
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
@@ -84,7 +78,7 @@ function commander(cmd) {
       addLine(
         'Opening mailto:<a href="mailto:yewaleprithvi2003@gmail.com"> yewaleprithvi2003@gmail.com</a>...',
         "color2",
-        80
+        80,
       );
       newTab(email);
       break;
@@ -129,7 +123,7 @@ function commander(cmd) {
       addLine(
         '<span class="inherit">Command not found. For a list of commands, type <span class="command">\'help\'</span>.</span>',
         "error",
-        100
+        100,
       );
       break;
   }

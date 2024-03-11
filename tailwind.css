@@ -5,7 +5,8 @@
 body {
   background-color: #4a2c4f;
   background-image: url("assets/438198.gif");
-    margin: 0;
+  background-attachment: scroll;
+  margin: 0;
   min-height: 99%;
   width: 100%;
   color: #519975;
@@ -17,6 +18,11 @@ body {
 b {
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* Hide scrollbar for webkit browsers */
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (min-width: 360px) {
@@ -80,12 +86,10 @@ b {
   position: absolute;
 }
 
-
-
 .cursor {
   font-size: 12px;
-  color: #73ABAD;
-  background-color: #73ABAD;
+  color: #73abad;
+  background-color: #73abad;
   position: relative;
   opacity: 1;
   height: 1.5em;
@@ -106,7 +110,7 @@ b {
 #command {
   cursor: text;
   height: 50px;
-  color: #73ABAD;
+  color: #73abad;
 }
 #liner {
   line-height: 1.3em;
@@ -141,9 +145,6 @@ b {
   }
 }
 
-
-
-
 .index {
   color: #dcdccc;
 }
@@ -175,6 +176,3 @@ a:hover {
 a:focus {
   outline: 0;
 }
-
-
-
