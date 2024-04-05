@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #9ccfd8;
+  color: #907aa9;
+  background-image: url("assets/beautiful-anime-street-scenery-cherry-blossom-kimono-uhdpaper.com-4K-6.1621.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0;
+  min-height: 99%;
+  width: 100%;
+
+  -moz-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
+  overflow-x: hidden;
+}
+b {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Hide scrollbar for webkit browsers */
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Common styles */
+.ascii {
+  font-size: 20px; /* Default font size */
+}
+
+/* Define breakpoints and font sizes */
+@media only screen and (min-width: 360px) {
+  .ascii {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 522px) {
+  .ascii {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 591px) {
+  .ascii {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 621px) {
+  .ascii {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .ascii {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ascii {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (min-width: 1437px) {
+  .ascii {
+    font-size: 41px;
+  }
+}
+
+.texter {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  left: -1000px;
+  position: absolute;
+}
+
+.cursor {
+  font-size: 12px;
+  color: #c9cadd;
+  background-color: #c9cadd;
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#command {
+  cursor: text;
+  height: 50px;
+  color: #31748f;
+}
+#liner {
+  line-height: 1.3em;
+  margin-top: -2px;
+  animation: show 0.5s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+#liner::before {
+  color: #b4637a;
+  content: "[prithvi@archrx5500m]~$";
+}
+#liner.password::before {
+  content: "Password:";
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Cursor End */
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.index {
+  color: #dcdccc;
+}
+.color2 {
+  color: #8285c1f0;
+}
+.command {
+  color: #9ccfd8;
+  text-shadow: 0 0 5px #31748f;
+}
+.error {
+  color: #6d71b9d9;
+}
+.white {
+  color: #fff;
+}
+.inherit,
+a {
+  color: #9ccfd8;
+}
+a {
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #211830;
+}
+a:focus {
+  outline: 0;
+}

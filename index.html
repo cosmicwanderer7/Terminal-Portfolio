@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <script>
+      // Randomly redirect to one of the theme HTML files
+      const themeIndex = Math.floor(Math.random() * 2); // Generates 0 or 1 randomly
+      if (themeIndex === 0) {
+        window.location.href = "theme.html";
+      } else {
+        window.location.href = "theme0.html";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Loading...</p>
+  </body>
+</html>
