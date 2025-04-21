@@ -3,17 +3,18 @@ const liner = document.getElementById("liner");
 const command = document.getElementById("typer");
 const textarea = document.getElementById("texter");
 const terminal = document.getElementById("terminal");
+const contentscroll = document.getElementById("contentscroll");
 
 let git = 0;
 let pw = false;
 const commands = [];
-// Add these new variables for y/n functionality
 let suggestedCommand = null;
 let awaitingConfirmation = false;
 
-// Function to scroll the terminal to the bottom
 function scrollToBottom() {
-  terminal.scrollTop = terminal.scrollHeight;
+  if (contentscroll) {
+    contentscroll.scrollTop = contentscroll.scrollHeight;
+  }
 }
 
 const commandMap = {
@@ -35,10 +36,9 @@ const commandMap = {
 setTimeout(function () {
   loopLines(banner, "", 80);
   textarea.focus();
-  scrollToBottom(); // Ensure the terminal is scrolled to the bottom on initial load
+  scrollToBottom();
 }, 100);
 
-// Enhanced event listeners with scroll to bottom functionality
 window.addEventListener("keyup", function (e) {
   enterKey(e);
   scrollToBottom();
@@ -59,7 +59,6 @@ terminal.addEventListener("click", function () {
   scrollToBottom();
 });
 
-// Add input event listener to ensure scrolling when typing begins
 textarea.addEventListener("input", scrollToBottom);
 
 textarea.value = "";
@@ -111,7 +110,6 @@ function enterKey(e) {
     const input = command.innerHTML.trim().toLowerCase();
     addLine("[prithvi@archrx5500m]~$" + command.innerHTML, "no-animation", 0);
 
-    // Handle y/n confirmation
     if (awaitingConfirmation && suggestedCommand) {
       if (input === "y") {
         commander(suggestedCommand);
@@ -175,27 +173,19 @@ function commander(cmd) {
       break;
     case "clear":
       setTimeout(function () {
-        // Get all the paragraphs (outputs) in the terminal except for the command input
         const paragraphs = terminal.querySelectorAll("p");
-        // Remove each paragraph
         paragraphs.forEach((p) => p.remove());
-
-        // Ensure the before element is preserved or recreated
         if (!document.getElementById("before")) {
           const beforeElement = document.createElement("a");
           beforeElement.id = "before";
           terminal.insertBefore(beforeElement, terminal.firstChild);
           before = beforeElement;
         }
-
-        // If you want to display the banner again after clearing
         if (typeof banner !== "undefined") {
           loopLines(banner, "", 80);
         }
-
-        // Make sure the focus is back on the input
         textarea.focus();
-        scrollToBottom(); // Ensure we scroll to bottom after clearing
+        scrollToBottom();
       }, 1);
       break;
     case "dev":
@@ -241,7 +231,7 @@ function commander(cmd) {
       }
       break;
   }
-  scrollToBottom(); // Ensure we scroll after executing any command
+  scrollToBottom();
 }
 
 function newTab(link) {
@@ -266,7 +256,7 @@ function addLine(text, style, time) {
     next.innerHTML = t;
     next.className = style;
     before.parentNode.insertBefore(next, before);
-    terminal.scrollTop = terminal.scrollHeight; // This line already existed, good
+    terminal.scrollTop = terminal.scrollHeight;
   }, time);
 }
 
@@ -274,7 +264,6 @@ function loopLines(name, style, time) {
   name.forEach(function (item, index) {
     addLine(item, style, index * time);
   });
-  // Add scroll to bottom after all lines are added with appropriate delay
   setTimeout(
     function () {
       scrollToBottom();
