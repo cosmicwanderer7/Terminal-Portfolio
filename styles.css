@@ -8,6 +8,8 @@
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
+  /* Theme variables */
+  /* Default theme (Cyber) */
   --color-primary: #7ae0ca;
   --color-secondary: #519975;
   --color-tertiary: #64748b;
@@ -25,7 +27,9 @@
   --color-spotify-icon: #1db954;
   --color-spotify-text: #fff;
   --color-spotify-track-info: #7ae0ca;
+  --background-image: url("assets/438198.gif");
 
+  /* Typography */
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -35,6 +39,28 @@
   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
   --step-ascii: clamp(1.125rem, 0.916rem + 1.4435vw, 3.0518rem);
+}
+
+/* Anime Theme */
+.theme-anime {
+  --color-primary: #9ccfd8;
+  --color-secondary: #907aa9;
+  --color-tertiary: #c9cadd;
+  --color-background: #9ccfd8;
+  --color-background-overlay: rgba(33, 24, 48, 0.7);
+  --color-accent: #b4637a;
+  --color-danger: #eb6f92;
+  --color-hover: #c9cadd;
+  --color-shadow: rgba(33, 24, 48, 0.4);
+  --color-command: #31748f;
+  --color-error: #6d71b9d9;
+  --color-white: #fff;
+  --color-spotify-bg: rgba(33, 24, 48, 0.65);
+  --color-spotify-border: #9ccfd8;
+  --color-spotify-icon: #31748f;
+  --color-spotify-text: #fff;
+  --color-spotify-track-info: #c9cadd;
+  --background-image: url("assets/beautiful-anime-street-scenery-cherry-blossom-kimono-uhdpaper.com-4K-6.1621.jpg");
 }
 
 a {
@@ -47,8 +73,9 @@ a:hover {
 
 body {
   background-color: var(--color-background);
-  background-image: url("assets/438198.gif");
+  background-image: var(--background-image);
   background-attachment: scroll;
+  background-size: cover;
   color: var(--color-secondary);
   -moz-text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
@@ -225,7 +252,6 @@ hr {
 }
 
 #liner::before {
-  color: var(--color-secondary);
   content: "[prithvi@archrx5500m]~$";
 }
 
