@@ -1,6 +1,6 @@
 @font-face {
   font-family: "FantasqueSansMono";
-  src: url("/assets/fonts/FantasqueSansMono-Regular.woff") format("woff");
+  src: url("assets/fonts/FantasqueSansMono-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
