@@ -256,7 +256,7 @@ function addLine(text, style, time) {
     next.innerHTML = t;
     next.className = style;
     before.parentNode.insertBefore(next, before);
-    terminal.scrollTop = terminal.scrollHeight;
+    contentscroll.scrollTop = contentscroll.scrollHeight;
   }, time);
 }
 

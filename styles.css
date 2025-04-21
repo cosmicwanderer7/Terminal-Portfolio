@@ -228,6 +228,12 @@ hr {
   font-size: var(--step-0);
 }
 
+@media (max-width: 726px) {
+  #terminal {
+    height: 38vh;
+  }
+}
+
 #command {
   cursor: text;
   height: 50px;
