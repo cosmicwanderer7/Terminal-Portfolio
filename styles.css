@@ -80,7 +80,7 @@ body {
   -moz-text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
   text-size-adjust: auto;
-  overflow: hidden;
+  overflow: auto;
   font-family: "FantasqueSansMono";
 }
 
