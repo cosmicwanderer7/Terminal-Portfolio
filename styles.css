@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "FantasqueSansMono";
+  src: url("/assets/fonts/FantasqueSansMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --color-primary: #7ae0ca;
+  --color-secondary: #519975;
+  --color-tertiary: #64748b;
+  --color-background: #4a2c4f;
+  --color-background-overlay: #081d2dd8;
+  --color-accent: #ef4b44;
+  --color-danger: #9d174d;
+  --color-hover: #8de2d0ac;
+  --color-shadow: #1d1e1fb4;
+  --color-command: #73abad;
+  --color-error: #6d71b9d9;
+  --color-white: #fff;
+  --color-spotify-bg: #061826a7;
+  --color-spotify-border: #7ae0ca;
+  --color-spotify-icon: #1db954;
+  --color-spotify-text: #fff;
+  --color-spotify-track-info: #7ae0ca;
+
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  --step-ascii: clamp(1.125rem, 0.916rem + 1.4435vw, 3.0518rem);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: url("assets/438198.gif");
+  background-attachment: scroll;
+  color: var(--color-secondary);
+  -moz-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
+  overflow: hidden;
+  font-family: "FantasqueSansMono";
+}
+
+.terminal-window {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-background-overlay);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  min-height: 98vh;
+  max-height: 200vh;
+  overflow: hidden;
+  box-shadow:
+    0 20px 25px -5px var(--color-shadow),
+    0 8px 10px -6px var(--color-shadow);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+  position: relative;
+  font-size: var(--step-0);
+  font-family: "FantasqueSansMono";
+}
+
+hr {
+  border: 1px ridge var(--color-primary);
+}
+.centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-icon {
+  padding-top: 2.5px;
+  font-size: 1.25rem;
+  color: var(--color-tertiary);
+}
+
+/* Specific hover colors */
+.github-icon:hover {
+  color: var(--color-accent);
+}
+
+.close-icon:hover {
+  color: var(--color-danger);
+}
+
+.ascii {
+  font-family: monospace; /* Makes sure characters align */
+  white-space: pre; /* Preserve formatting */
+  display: inline-block;
+  font-size: var(--step-ascii);
+  padding-left: var(--step-2);
+  color: var(--color-hover);
+  white-space: pre-wrap;
+  display: inline-block;
+  overflow-wrap: break-word;
+  line-height: 1;
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.name::after {
+  content: "------------------------------";
+  display: block;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem; /* optional spacing between items */
+}
+
+.info-item i {
+  margin-right: 0.6rem;
+  min-width: 1.25rem; /* ensures consistent icon spacing */
+  text-align: center;
+}
+
+.link-text {
+  padding-left: 0.5rem; /* nice left indent */
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-text:hover {
+  color: var(--color-accent); /* optional hover to match icon */
+}
+
+.content-scroll {
+  overflow-y: auto;
+}
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 9rem; /* space between ASCII and profile */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.ascii-Hero {
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  text-align: left;
+  font-size: var(--step--1);
+  padding: var(--step-2);
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1015px) {
+  .content-container {
+    flex-direction: column;
+    gap: 0rem; /* space between ASCII and profile */
+  }
+  .profile-info {
+    padding-top: var(--step--2);
+  }
+
+  .spotify-panel {
+    float: left;
+  }
+}
+
+/* Terminal input */
+#terminal {
+  height: 55vh;
+  overflow-y: auto;
+  padding-left: var(--step-0);
+  font-size: var(--step-0);
+}
+
+#command {
+  cursor: text;
+  height: 50px;
+  color: var(--color-command);
+}
+
+.texter {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#liner {
+  line-height: 1.3em;
+  animation: show 0.5s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+#liner::before {
+  color: var(--color-secondary);
+  content: "[prithvi@archrx5500m]~$";
+}
+
+.cursor {
+  font-size: 12px;
+  color: var(--color-command);
+  background-color: var(--color-command);
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
+}
+
+/* Animations */
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Colors */
+.index {
+  color: #dcdccc;
+}
+
+.color2 {
+  color: #8285c1f0;
+}
+
+.command {
+  color: var(--color-command);
+  text-shadow: 0 0 5px var(--color-command);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.5rem;
+  z-index: 50;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bottom-bar .spotify-panel {
+  pointer-events: auto;
+  margin: 15px;
+}
+
+/* Spotify styling */
+.spotify-panel {
+  background-color: var(--color-spotify-bg);
+  border: 1px solid var(--color-spotify-border);
+  border-radius: 4px;
+  max-width: max-content;
+  padding: 0.5rem;
+  position: relative;
+  float: right;
+  align-items: center;
+  font-size: var(--step--1);
+  color: var(--color-spotify-text);
+}
+
+.spotify-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.spotify-icon {
+  font-size: var(--step-3);
+  color: var(--color-spotify-icon);
+  display: flex;
+  margin-right: 0.5rem;
+  padding: 0.4rem;
+}
+
+.spotify-info {
+  margin-right: 1rem;
+  display: flex;
+}
+
+.track-info {
+  justify-content: center;
+  text-decoration: underline;
+  color: var(--color-spotify-track-info);
+}

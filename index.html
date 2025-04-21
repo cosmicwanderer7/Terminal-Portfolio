@@ -1,24 +1,209 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands.">
-  <meta name="keywords" content="prithvi, prithviYewale, portfolio, HTML, CSS, prithvi_yewale">
-  <meta name="author" content="Prithvi Yewale">
-  <meta http-equiv="refresh" content="250">
-    <title>Prithvi Sanjay Yewale</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands."
+    />
+    <meta
+      name="keywords"
+      content="prithvi, prithviYewale, portfolio, HTML, CSS, prithvi_yewale, terminal terminal-portfolio"
+    />
+    <meta name="author" content="Prithvi Yewale" />
+    <meta http-equiv="refresh" content="250" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/39565093f3.js"></script>
     <script>
-      // Randomly redirect to one of the theme HTML files
-      const themeIndex = Math.floor(Math.random() * 2); // Generates 0 or 1 randomly
-      if (themeIndex === 0) {
-        window.location.href = "theme.html";
-      } else {
-        window.location.href = "theme0.html";
+      function close_window() {
+        if (confirm("Close Window?")) {
+          window.location.href = "about:blank";
+        }
       }
     </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $.getJSON(
+        "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json",
+        function (data) {
+          let artist = document.getElementById("song");
+          let name = document.getElementById("track");
+          let link = document.querySelector(".spotify-panel a");
+
+          const artistVal = data.recenttracks.track[0].artist["#text"];
+          const trackVal = data.recenttracks.track[0].name;
+          const urlVal = data.recenttracks.track[0].url;
+
+          artist.append(artistVal);
+          name.append(trackVal);
+          link.href = urlVal; // ✅ Update the anchor tag href
+        },
+      );
+    </script>
+    <title>Prithvi Sanjay Yewale</title>
   </head>
   <body>
-    <p>Loading...</p>
+    <div class="terminal-window">
+      <header>
+        <a href="https://github.com/cosmicwanderer7/" target="_blank">
+          <i class="fa-brands fa-github header-icon github-icon"></i>
+        </a>
+
+        <div class="centered">
+          <span>prithvi@archrx5500m</span>
+        </div>
+
+        <a href="#" onclick="close_window(); return false;">
+          <i class="fa-solid fa-circle-xmark header-icon close-icon"></i>
+        </a>
+      </header>
+      <hr />
+      <div class="content-scroll">
+        <div class="content-container">
+          <div class="ascii-Hero">
+            <pre class="ascii">
+█▀█ █▀█ █ ▀█▀ █░█ █░█ █ 
+█▀▀ █▀▄ █ ░█░ █▀█ ▀▄▀ █
+      </pre
+            >
+          </div>
+          <div class="profile-info">
+            <div class="info-item">
+              <div class="name">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Prithvi Sanjay Yewale</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-file-invoice"></i>
+              <span>Resume</span>
+              <a
+                href="https://drive.google.com/file/d/1TEDi7fgC7Neo9SMWVlLOsBSFoZ0wzbBg/view?usp=sharing"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;Download my resume...
+              </a>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-github"></i>
+              <span>Github</span>
+              <a
+                href="https://github.com/cosmicwanderer7"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;github/cosmicwanderer7
+              </a>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-twitter"></i>
+              <span>Twitter</span>
+              <a
+                href="https://twitter.com/PrithviYewale"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;twitter/PrithviYewale
+              </a>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>Linkedin</span>
+              <a
+                href="https://www.linkedin.com/in/prithvi-yewale-a77275228/"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;linkedin/prithviYewale
+              </a>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+              <a
+                href="https://www.instagram.com/prithvi_yewale/"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;instagram/prithvi_yewale
+              </a>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-dev"></i>
+              <span>Dev</span>
+              <a
+                href="https://dev.to/cosmicwanderer7"
+                class="link-text"
+                target="_blank"
+              >
+                → &nbsp;dev.to/cosmicwanderer7
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="terminal">
+          <a id="before"></a>
+
+          <div id="command" onclick="$('texter').focus();">
+            <input
+              type="text"
+              id="texter"
+              class="texter"
+              onkeyup="typeIt(this, event)"
+              onkeydown="typeIt(this, event); moveIt(this.value.length, event)"
+              onkeypress="typeIt(this, event);"
+            />
+            <div id="liner">
+              <span id="typer"></span><b class="cursor" id="cursor">█</b>
+              <div class="list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bottom-bar">
+      <!--something else-->
+
+      <div class="spotify-panel">
+        <div class="spotify-inner">
+          <i class="fa-brands fa-spotify spotify-icon"></i>
+          <div class="track-info">
+            <a href="" target="_blank">
+              <div class="spotify-info">Now Listening to...</div>
+              <div id="track">Track:</div>
+              <div id="song">Artist:</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/caret.js"></script>
+    <script src="./js/commands.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

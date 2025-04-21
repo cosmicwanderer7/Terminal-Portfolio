@@ -1,50 +1,148 @@
-var before = document.getElementById("before");
-var liner = document.getElementById("liner");
-var command = document.getElementById("typer");
-var textarea = document.getElementById("texter");
-var terminal = document.getElementById("terminal");
+const before = document.getElementById("before");
+const liner = document.getElementById("liner");
+const command = document.getElementById("typer");
+const textarea = document.getElementById("texter");
+const terminal = document.getElementById("terminal");
 
-var git = 0;
-var pw = false;
-var commands = [];
+let git = 0;
+let pw = false;
+const commands = [];
+// Add these new variables for y/n functionality
+let suggestedCommand = null;
+let awaitingConfirmation = false;
+
+// Function to scroll the terminal to the bottom
+function scrollToBottom() {
+  terminal.scrollTop = terminal.scrollHeight;
+}
+
+const commandMap = {
+  help: "help",
+  aboutme: "aboutme",
+  projects: "projects",
+  social: "social",
+  email: "email",
+  history: "history",
+  sudo: "sudo",
+  clear: "clear",
+  dev: "dev",
+  twitter: "twitter",
+  linkedin: "linkedin",
+  instagram: "instagram",
+  github: "github",
+};
 
 setTimeout(function () {
   loopLines(banner, "", 80);
   textarea.focus();
+  scrollToBottom(); // Ensure the terminal is scrolled to the bottom on initial load
 }, 100);
 
-window.addEventListener("keyup", enterKey);
+// Enhanced event listeners with scroll to bottom functionality
+window.addEventListener("keyup", function (e) {
+  enterKey(e);
+  scrollToBottom();
+});
 
-//init
+window.addEventListener("keydown", function () {
+  textarea.focus();
+  scrollToBottom();
+});
+
+document.addEventListener("click", function () {
+  textarea.focus();
+  scrollToBottom();
+});
+
+terminal.addEventListener("click", function () {
+  textarea.focus();
+  scrollToBottom();
+});
+
+// Add input event listener to ensure scrolling when typing begins
+textarea.addEventListener("input", scrollToBottom);
+
 textarea.value = "";
 command.innerHTML = textarea.value;
 
 function enterKey(e) {
-  if (e.keyCode == 181) {
+  textarea.focus();
+  scrollToBottom();
+
+  if (e.keyCode === 181) {
     document.location.reload(true);
   }
 
-  if (e.keyCode == 13) {
-    commands.push(command.innerHTML);
-    git = commands.length;
+  if (e.key === "Tab") {
+    e.preventDefault();
+    const partial = textarea.value.toLowerCase();
+    const matches = Object.keys(commandMap).filter((cmd) =>
+      cmd.startsWith(partial),
+    );
+    if (matches.length === 1) {
+      textarea.value = matches[0];
+      command.innerHTML = matches[0];
+    } else if (matches.length > 1) {
+      addLine("<br>", "", 0);
+      loopLines(matches, "color2", 80);
+      addLine("<br>", "", matches.length * 80 + 100);
+    }
+    scrollToBottom();
+    return;
+  }
+
+  if (e.ctrlKey && e.key === "r") {
+    e.preventDefault();
+    const search = prompt("Reverse search:");
+    const match = commands
+      .slice()
+      .reverse()
+      .find((cmd) => cmd.includes(search));
+    if (match) {
+      textarea.value = match;
+      command.innerHTML = match;
+    } else {
+      addLine("No match found in history.", "error", 100);
+    }
+    scrollToBottom();
+  }
+
+  if (e.keyCode === 13) {
+    const input = command.innerHTML.trim().toLowerCase();
     addLine("[prithvi@archrx5500m]~$" + command.innerHTML, "no-animation", 0);
-    commander(command.innerHTML.toLowerCase());
+
+    // Handle y/n confirmation
+    if (awaitingConfirmation && suggestedCommand) {
+      if (input === "y") {
+        commander(suggestedCommand);
+      } else {
+        addLine("Cancelled.", "color2", 80);
+      }
+      awaitingConfirmation = false;
+      suggestedCommand = null;
+    } else {
+      commands.push(command.innerHTML);
+      git = commands.length;
+      commander(input);
+    }
+
     command.innerHTML = "";
     textarea.value = "";
+    scrollToBottom();
   }
-  if (e.keyCode == 38 && git != 0) {
+
+  if (e.keyCode === 38 && git !== 0) {
     git -= 1;
     textarea.value = commands[git];
     command.innerHTML = textarea.value;
+    scrollToBottom();
   }
-  if (e.keyCode == 40 && git != commands.length) {
+
+  if (e.keyCode === 40 && git !== commands.length) {
     git += 1;
-    if (commands[git] === undefined) {
-      textarea.value = "";
-    } else {
-      textarea.value = commands[git];
-    }
+    textarea.value = commands[git] || "";
     command.innerHTML = textarea.value;
+    scrollToBottom();
   }
 }
 
@@ -56,18 +154,11 @@ function commander(cmd) {
     case "aboutme":
       loopLines(aboutme, "color2 margin", 80);
       break;
-
-    case "DEV":
-      addLine("Opening Dev.to...", "color2", 80);
-      newTab(Dev);
-      break;
-
-    case "social":
-      loopLines(social, "color2 margin", 80);
-      break;
-
     case "projects":
       loopLines(projects, "color2 margin", 80);
+      break;
+    case "social":
+      loopLines(social, "color2 margin", 80);
       break;
     case "history":
       addLine("<br>", "", 0);
@@ -82,19 +173,31 @@ function commander(cmd) {
       );
       newTab(email);
       break;
-      newTab(email);
-      break;
     case "clear":
       setTimeout(function () {
-        terminal.innerHTML =
-          '<a id="before"><div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div></a>';
-        before = document.getElementById("before");
+        // Get all the paragraphs (outputs) in the terminal except for the command input
+        const paragraphs = terminal.querySelectorAll("p");
+        // Remove each paragraph
+        paragraphs.forEach((p) => p.remove());
+
+        // Ensure the before element is preserved or recreated
+        if (!document.getElementById("before")) {
+          const beforeElement = document.createElement("a");
+          beforeElement.id = "before";
+          terminal.insertBefore(beforeElement, terminal.firstChild);
+          before = beforeElement;
+        }
+
+        // If you want to display the banner again after clearing
+        if (typeof banner !== "undefined") {
+          loopLines(banner, "", 80);
+        }
+
+        // Make sure the focus is back on the input
+        textarea.focus();
+        scrollToBottom(); // Ensure we scroll to bottom after clearing
       }, 1);
       break;
-    case "banner":
-      loopLines(banner, "", 80);
-      break;
-    // socials
     case "dev":
       addLine("Opening Dev.to...", "color2", 80);
       newTab(dev);
@@ -120,13 +223,25 @@ function commander(cmd) {
       newTab(sudo);
       break;
     default:
-      addLine(
-        '<span class="inherit">Command not found. For a list of commands, type <span class="command">\'help\'</span>.</span>',
-        "error",
-        100,
-      );
+      const closest = findClosestCommand(cmd);
+      if (closest) {
+        suggestedCommand = closest;
+        awaitingConfirmation = true;
+        addLine(
+          `<span class="inherit">Command not found. Did you mean <span class="command">'${closest}'</span>? (y/n)</span>`,
+          "error",
+          100,
+        );
+      } else {
+        addLine(
+          `<span class="inherit">Command not found. Type <span class="command">'help'</span> for available commands.</span>`,
+          "error",
+          100,
+        );
+      }
       break;
   }
+  scrollToBottom(); // Ensure we scroll after executing any command
 }
 
 function newTab(link) {
@@ -136,23 +251,22 @@ function newTab(link) {
 }
 
 function addLine(text, style, time) {
-  var t = "";
+  let t = "";
   for (let i = 0; i < text.length; i++) {
-    if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
+    if (text.charAt(i) === " " && text.charAt(i + 1) === " ") {
       t += "&nbsp;&nbsp;";
       i++;
     } else {
       t += text.charAt(i);
     }
   }
+
   setTimeout(function () {
-    var next = document.createElement("p");
+    const next = document.createElement("p");
     next.innerHTML = t;
     next.className = style;
-
     before.parentNode.insertBefore(next, before);
-
-    window.scrollTo(0, document.body.offsetHeight);
+    terminal.scrollTop = terminal.scrollHeight; // This line already existed, good
   }, time);
 }
 
@@ -160,4 +274,44 @@ function loopLines(name, style, time) {
   name.forEach(function (item, index) {
     addLine(item, style, index * time);
   });
+  // Add scroll to bottom after all lines are added with appropriate delay
+  setTimeout(
+    function () {
+      scrollToBottom();
+    },
+    name.length * time + 50,
+  );
+}
+
+function findClosestCommand(input) {
+  const threshold = 3;
+  let minDist = Infinity;
+  let closest = null;
+  Object.keys(commandMap).forEach((cmd) => {
+    const dist = levenshtein(input, cmd);
+    if (dist < minDist && dist <= threshold) {
+      minDist = dist;
+      closest = cmd;
+    }
+  });
+  return closest;
+}
+
+function levenshtein(a, b) {
+  const matrix = Array.from({ length: a.length + 1 }, () =>
+    Array(b.length + 1).fill(0),
+  );
+  for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+  for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost,
+      );
+    }
+  }
+  return matrix[a.length][b.length];
 }
