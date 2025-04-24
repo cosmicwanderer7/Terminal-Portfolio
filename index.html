@@ -3,31 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands."
-    />
-    <meta
-      name="keywords"
-      content="prithvi, prithviYewale, portfolio, HTML, CSS, prithvi_yewale, terminal terminal-portfolio"
-    />
+    <meta name="description" content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands." />
+    <meta name="keywords" content="prithvi, prithviYewale, portfolio, HTML, CSS, prithvi_yewale, terminal terminal-portfolio" />
     <meta name="author" content="Prithvi Yewale" />
     <meta http-equiv="refresh" content="250" />
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
     <link href="styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://kit.fontawesome.com/39565093f3.js"></script>
+    <script src="https://kit.fontawesome.com/39565093f3.js" crossorigin="anonymous"></script>
     <script>
       function close_window() {
         if (confirm("Close Window?")) {
@@ -35,176 +17,157 @@
         }
       }
     </script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script type="text/javascript">
-      $.getJSON(
-        "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json",
-        function (data) {
-          let artist = document.getElementById("song");
-          let name = document.getElementById("track");
-          let link = document.querySelector(".spotify-panel a");
+      $.getJSON("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json", function (data) {
+        let artist = document.getElementById("song");
+        let name = document.getElementById("track");
+        let link = document.querySelector(".spotify-panel a");
 
-          const artistVal = data.recenttracks.track[0].artist["#text"];
-          const trackVal = data.recenttracks.track[0].name;
-          const urlVal = data.recenttracks.track[0].url;
+        const artistVal = data.recenttracks.track[0].artist["#text"];
+        const trackVal = data.recenttracks.track[0].name;
+        const urlVal = data.recenttracks.track[0].url;
 
-          artist.append(artistVal);
-          name.append(trackVal);
-          link.href = urlVal; // ✅ Update the anchor tag href
-        },
-      );
+        artist.append(artistVal);
+        name.append(trackVal);
+        link.href = urlVal;
+      });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const gif = document.getElementById("cursor-cat-gif");
+
+    if (gif) {
+      gif.style.position = "fixed"; // Make sure it can move freely
+      gif.style.pointerEvents = "none"; // So it doesn't block clicks
+
+      document.addEventListener("mousemove", (e) => {
+        gif.style.left = e.clientX + "px";
+        gif.style.top = e.clientY + "px";
+      });
+    }
+  });
+  </script>
     <title>Prithvi Sanjay Yewale</title>
   </head>
   <body>
-    <div class="terminal-window">
-      <header>
-        <a href="https://github.com/cosmicwanderer7/" target="_blank">
-          <i class="fa-brands fa-github header-icon github-icon"></i>
+    <div class="terminal-window" role="main">
+      <header role="banner" aria-label="Site Header">
+        <a href="https://github.com/cosmicwanderer7/" target="_blank" aria-label="GitHub Profile">
+          <i class="fa-brands fa-github header-icon github-icon" aria-hidden="true"></i>
         </a>
 
-        <div class="centered">
+        <div class="centered" aria-hidden="true">
           <span>prithvi@archrx5500m</span>
         </div>
 
-        <a href="#" onclick="close_window(); return false;">
-          <i class="fa-solid fa-circle-xmark header-icon close-icon"></i>
+        <a href="#" onclick="close_window(); return false;" aria-label="Close Window">
+          <i class="fa-solid fa-circle-xmark header-icon close-icon" aria-hidden="true"></i>
         </a>
       </header>
-      <hr />
+
+      <hr aria-hidden="true" />
+
       <div id="contentscroll">
         <div class="content-container">
-          <div class="ascii-Hero">
-            <pre class="ascii">
+          <div class="ascii-Hero" aria-hidden="true">
+            <pre class="ascii" aria-label="ASCII Art">
 █▀█ █▀█ █ ▀█▀ █░█ █░█ █ 
 █▀▀ █▀▄ █ ░█░ █▀█ ▀▄▀ █
-      </pre
-            >
+            </pre>
           </div>
-          <div class="profile-info">
+
+          <section class="profile-info" aria-labelledby="profile-heading">
+            <h1 id="profile-heading" class="sr-only">Profile Information</h1>
+
             <div class="info-item">
               <div class="name">
-                <i class="fa-solid fa-address-card"></i>
+                <i class="fa-solid fa-address-card" aria-hidden="true"></i>
                 <span>Prithvi Sanjay Yewale</span>
               </div>
             </div>
 
             <div class="info-item">
-              <i class="fa-solid fa-file-invoice"></i>
+              <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
               <span>Resume</span>
-              <a
-                href="https://drive.google.com/file/d/1TEDi7fgC7Neo9SMWVlLOsBSFoZ0wzbBg/view?usp=sharing"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;Download my resume...
-              </a>
+              <a href="https://drive.google.com/file/d/1TEDi7fgC7Neo9SMWVlLOsBSFoZ0wzbBg/view?usp=sharing" class="link-text" target="_blank" aria-label="Download my resume">→ &nbsp;Download my resume...</a>
             </div>
 
             <div class="info-item">
-              <i class="fa-brands fa-github"></i>
-              <span>Github</span>
-              <a
-                href="https://github.com/cosmicwanderer7"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;github/cosmicwanderer7
-              </a>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+              <a href="https://github.com/cosmicwanderer7" class="link-text" target="_blank" aria-label="GitHub cosmicwanderer7">→ &nbsp;github/cosmicwanderer7</a>
             </div>
 
             <div class="info-item">
-              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
               <span>Twitter</span>
-              <a
-                href="https://twitter.com/PrithviYewale"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;twitter/PrithviYewale
-              </a>
+              <a href="https://twitter.com/PrithviYewale" class="link-text" target="_blank" aria-label="Twitter PrithviYewale">→ &nbsp;twitter/PrithviYewale</a>
             </div>
 
             <div class="info-item">
-              <i class="fa-brands fa-linkedin-in"></i>
-              <span>Linkedin</span>
-              <a
-                href="https://www.linkedin.com/in/prithvi-yewale-a77275228/"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;linkedin/prithviYewale
-              </a>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/prithvi-yewale-a77275228/" class="link-text" target="_blank" aria-label="LinkedIn prithviYewale">→ &nbsp;linkedin/prithviYewale</a>
             </div>
 
             <div class="info-item">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               <span>Instagram</span>
-              <a
-                href="https://www.instagram.com/prithvi_yewale/"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;instagram/prithvi_yewale
-              </a>
+              <a href="https://www.instagram.com/prithvi_yewale/" class="link-text" target="_blank" aria-label="Instagram prithvi_yewale">→ &nbsp;instagram/prithvi_yewale</a>
             </div>
 
             <div class="info-item">
-              <i class="fa-brands fa-dev"></i>
+              <i class="fa-brands fa-dev" aria-hidden="true"></i>
               <span>Dev</span>
-              <a
-                href="https://dev.to/cosmicwanderer7"
-                class="link-text"
-                target="_blank"
-              >
-                → &nbsp;dev.to/cosmicwanderer7
-              </a>
+              <a href="https://dev.to/cosmicwanderer7" class="link-text" target="_blank" aria-label="Dev.to cosmicwanderer7">→ &nbsp;dev.to/cosmicwanderer7</a>
             </div>
-          </div>
+          </section>
         </div>
-        <div id="terminal">
+
+        <section id="terminal" aria-label="Terminal Emulator">
           <a id="before"></a>
 
-          <div id="command" onclick="$('texter').focus();">
+          <div id="command" onclick="document.getElementById('texter').focus();">
+            <label for="texter" class="sr-only">Command Input</label>
             <input
               type="text"
               id="texter"
               class="texter"
+              aria-label="Command line input"
               onkeyup="typeIt(this, event)"
               onkeydown="typeIt(this, event); moveIt(this.value.length, event)"
               onkeypress="typeIt(this, event);"
             />
             <div id="liner">
-              <span id="typer"></span><b class="cursor" id="cursor">█</b>
-              <div class="list"></div>
+              <span id="typer" aria-live="polite"></span><b class="cursor" id="cursor" aria-hidden="true">█</b>
+              <div class="list" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="bottom-bar" role="contentinfo">
+       
+        <div class="license-info"></div>
+        <div class="spotify-panel" aria-label="Now Playing on Spotify">
+          <div class="spotify-inner">
+            <i class="fa-brands fa-spotify spotify-icon" aria-hidden="true"></i>
+            <div class="track-info">
+              <a href="" target="_blank" aria-label="Now listening to track on Spotify">
+                <div class="spotify-info">Now Listening to...</div>
+                <div id="track">Track:</div>
+                <div id="song">Artist:</div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <footer class="bottom-bar">
-      <!--something else-->
+      </footer>
 
-      <div class="spotify-panel">
-        <div class="spotify-inner">
-          <i class="fa-brands fa-spotify spotify-icon"></i>
-          <div class="track-info">
-            <a href="" target="_blank">
-              <div class="spotify-info">Now Listening to...</div>
-              <div id="track">Track:</div>
-              <div id="song">Artist:</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
     <script src="js/theme.js"></script>
     <script src="./js/caret.js"></script>
     <script src="./js/commands.js"></script>
     <script src="./js/main.js"></script>
+    <img src="assets/cat.gif" id="cursor-cat-gif" alt="cursor-follower" />
   </body>
 </html>

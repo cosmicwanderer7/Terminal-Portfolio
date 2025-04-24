@@ -184,6 +184,8 @@ hr {
 }
 
 #contentscroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
   overflow-y: scroll;
 }
 .content-container {
@@ -320,7 +322,6 @@ hr {
   bottom: 0;
   left: 0;
   right: 0;
-
   justify-content: space-between;
   align-items: flex-end;
   padding: 0.5rem;
@@ -332,6 +333,19 @@ hr {
 .bottom-bar .spotify-panel {
   pointer-events: auto;
   margin: 15px;
+}
+
+#cursor-cat-gif {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transition:
+    top 0.05s linear,
+    left 0.05s linear;
 }
 
 /* Spotify styling */
