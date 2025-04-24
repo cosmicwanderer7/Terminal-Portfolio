@@ -27,7 +27,7 @@
   --color-spotify-icon: #1db954;
   --color-spotify-text: #fff;
   --color-spotify-track-info: #7ae0ca;
-  --background-image: url("assets/438198.gif");
+  --background-image: url("assets/438198.webp");
 
   /* Typography */
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
