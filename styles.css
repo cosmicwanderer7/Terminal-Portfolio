@@ -80,7 +80,7 @@ body {
   -moz-text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
   text-size-adjust: auto;
-  overflow: auto;
+  overflow: hidden;
   font-family: "FantasqueSansMono";
 }
 
@@ -91,7 +91,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 98vh;
-  max-height: 1000vh;
+  max-height: 105vh;
   overflow: hidden;
   box-shadow:
     0 20px 25px -5px var(--color-shadow),
