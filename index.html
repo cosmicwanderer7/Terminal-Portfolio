@@ -33,6 +33,21 @@
         link.href = urlVal;
       });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const gif = document.getElementById("cursor-cat-gif");
+
+    if (gif) {
+      gif.style.position = "fixed"; // Make sure it can move freely
+      gif.style.pointerEvents = "none"; // So it doesn't block clicks
+
+      document.addEventListener("mousemove", (e) => {
+        gif.style.left = e.clientX + "px";
+        gif.style.top = e.clientY + "px";
+      });
+    }
+  });
+  </script>
     <title>Prithvi Sanjay Yewale</title>
   </head>
   <body>
@@ -153,5 +168,6 @@
     <script src="./js/caret.js"></script>
     <script src="./js/commands.js"></script>
     <script src="./js/main.js"></script>
+    <img src="assets/cat.gif" id="cursor-cat-gif" alt="cursor-follower" />
   </body>
 </html>
