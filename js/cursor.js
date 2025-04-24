@@ -5,27 +5,42 @@ document.addEventListener("DOMContentLoaded", () => {
     gif.style.position = "fixed";
     gif.style.pointerEvents = "none";
     gif.style.zIndex = "9999";
-    gif.style.width = "64px"; // You can adjust the size
+    gif.style.width = "64px";
     gif.style.height = "auto";
 
-    // Mouse movement
+    // Move handler
+    const moveGif = (x, y) => {
+      gif.style.left = `${x + 10}px`;
+      gif.style.top = `${y + 10}px`;
+    };
+
+    // Mouse - fast enough, no throttling needed
     document.addEventListener("mousemove", (e) => {
-      gif.style.left = `${e.clientX + 10}px`;
-      gif.style.top = `${e.clientY + 10}px`;
+      moveGif(e.clientX, e.clientY);
     });
 
-    // Touch movement (tap or drag)
-    document.addEventListener("touchmove", (e) => {
-      const touch = e.touches[0];
-      gif.style.left = `${touch.clientX + 10}px`;
-      gif.style.top = `${touch.clientY + 10}px`;
+    // Touch - throttle updates
+    let lastTouchTime = 0;
+    const TOUCH_THROTTLE = 50; // milliseconds
+
+    const throttledTouchMove = (e) => {
+      const now = Date.now();
+      if (now - lastTouchTime > TOUCH_THROTTLE) {
+        const touch = e.touches[0];
+        moveGif(touch.clientX, touch.clientY);
+        lastTouchTime = now;
+      }
+    };
+
+    document.addEventListener("touchmove", throttledTouchMove, {
+      passive: true,
     });
 
-    // On initial tap
+    // On initial tap, move instantly
     document.addEventListener("touchstart", (e) => {
       const touch = e.touches[0];
-      gif.style.left = `${touch.clientX + 10}px`;
-      gif.style.top = `${touch.clientY + 10}px`;
+      moveGif(touch.clientX, touch.clientY);
+      lastTouchTime = Date.now();
     });
   }
 });
