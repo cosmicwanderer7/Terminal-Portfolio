@@ -25,33 +25,8 @@
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
-      defer
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const gif = document.getElementById("cursor-cat-gif");
-
-        if (gif) {
-          gif.style.position = "fixed";
-          gif.style.pointerEvents = "none";
-          gif.style.zIndex = "9999";
-          gif.style.width = "64px"; // adjust as needed
-          gif.style.height = "auto";
-
-          const isTouchDevice =
-            "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-          if (!isTouchDevice) {
-            document.addEventListener("mousemove", (e) => {
-              gif.style.left = e.clientX + 10 + "px"; // optional offset
-              gif.style.top = e.clientY + 10 + "px";
-            });
-          } else {
-            gif.style.display = "none"; // hide on touch devices
-          }
-        }
-      });
-
       $.getJSON(
         "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json",
         function (data) {
@@ -63,12 +38,11 @@
           const trackVal = data.recenttracks.track[0].name;
           const urlVal = data.recenttracks.track[0].url;
 
-          artist.textContent = artistVal;
-          name.textContent = trackVal;
+          artist.append(artistVal);
+          name.append(trackVal);
           link.href = urlVal;
         },
       );
-
       function close_window() {
         if (confirm("Close Window?")) {
           window.location.href = "about:blank";
@@ -260,6 +234,7 @@
 
       <script src="js/theme.js" defer></script>
       <script src="js/caret.js" defer></script>
+      <script src="js/cursor.js" defer></script>
       <script src="js/commands.js" defer></script>
       <script src="js/main.js" defer></script>
     </div>

@@ -344,8 +344,8 @@ hr {
   z-index: 9999;
   pointer-events: none;
   transition:
-    top 0.05s linear,
-    left 0.05s linear;
+    top 0.03s ease-out,
+    left 0.03s ease-out;
 }
 
 /* Spotify styling */
