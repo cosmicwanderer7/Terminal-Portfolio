@@ -385,3 +385,14 @@ hr {
   text-decoration: underline;
   color: var(--color-spotify-track-info);
 }
+
+pre {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
