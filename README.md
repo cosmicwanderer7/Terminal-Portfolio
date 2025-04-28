@@ -1,7 +1,7 @@
 # Terminal-Portfolio
 ## About The Project
  A Terminal Portfolio. 
- Project is live www.webprithviyewale.tech
+ Project is live [www.webprithviyewale.tech](https://cosmicwanderer7.github.io/Terminal-Portfolio/)
 
 ![App Screenshot](https://user-images.githubusercontent.com/65147258/234175185-93297c6a-c9bf-4cf1-83a5-d3e1f0156d73.png)
 
@@ -14,7 +14,6 @@ https://github.com/cosmicwanderer7/Terminal-Portfolio/assets/65147258/3551cdc0-d
 
 
 * [Html5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [Tailwind CSS](https://tailwindcss.com/)
 * [LastFM api](https://www.last.fm/api)
 * [npm](https://www.npmjs.com/)
 
