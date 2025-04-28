@@ -31,6 +31,7 @@ const commandMap = {
   linkedin: "linkedin",
   instagram: "instagram",
   github: "github",
+  snake: "snake",
 };
 
 setTimeout(function () {
@@ -214,9 +215,6 @@ function commander(cmd) {
       break;
     case "snake":
       runSnakeGame();
-      break;
-    case "asteroid":
-      runAsteroidGame();
       break;
     default:
       const closest = findClosestCommand(cmd);

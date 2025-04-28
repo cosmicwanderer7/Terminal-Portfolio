@@ -29,37 +29,44 @@ let aboutme = [
 
 let social = [
   "<br>",
-  `<div id="social-section">`,
-  `dev          <a href="${dev}" target="_blank">dev.to/cosmicwanderer7</a>`,
-  `twitter      <a href="${twitter}" target="_blank">twitter.com/PrithviYewale</a>`,
-  `linkedin     <a href="${linkedin}" target="_blank">linkedin/prithviyewale</a>`,
-  `instagram    <a href="${instagram}" target="_blank">instagram/prithvi_yewale</a>`,
-  `github       <a href="${github}" target="_blank">github/cosmicwanderer7</a>`,
-  "</div>",
+  'dev        <a href="' + dev + '" target="_blank">dev.to/cosmicwanderer7</a>',
+  'twitter        <a href="' +
+    twitter +
+    '" target="_blank">twitter.com/PrithviYewale</a>',
+  'linkedin       <a href="' +
+    linkedin +
+    '" target="_blank">linkedin/prithviYewale</a>',
+  'instagram      <a href="' +
+    instagram +
+    '" target="_blank">instagram/prithvi_yewale</a>',
+  'github         <a href="' +
+    github +
+    '" target="_blank">github/cosmicwanderer7</a>',
   "<br>",
 ];
 
 let help = [
-  `<br><div id="help-section"><pre class="whitespace-pre-wrap break-words overflow-x-auto">`,
-  `<span class="command">aboutme</span>       
-↳ Displays Who I am`,
-  `<span class="command">social</span>        
-↳ Lists social networks`,
-  `<span class="command">projects</span>      
-↳ View coding projects`,
-  `<span class="command">email</span>         
-↳ Send me an email`,
-  `<span class="command">history</span>       
-↳ View command history`,
-  `<span class="command">help</span>          
-↳ Displays this help msg`,
-  `<span class="command">sudo</span>          
-↳ Try it out yourself 😏`,
-  `<span class="command">clear</span>         
-↳ Clear the terminal`,
-  `</pre></div><br>`,
+  `<br><div id="help-section"><pre class="whitespace-pre-wrap">
+<span class="command">aboutme</span>
+↳ Displays who I am?
+<span class="command">social</span>
+↳ Lists social networks.
+<span class="command">projects</span>
+↳ View coding projects.
+<span class="command">email</span>
+↳ To send me an email.
+<span class="command">history</span>
+↳ View command history.
+<span class="command">help</span>
+↳ Displays this help message.
+<span class="command">sudo</span>
+↳ Try it out for yourself.
+<span class="command">snake</span>
+↳ Run Snake Game.
+<span class="command">clear</span>
+↳ Clear the terminal.
+</pre></div><br>`,
 ];
-
 let projects = [
   "<br>",
   `<div id="projects-section">`,
