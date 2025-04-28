@@ -3,10 +3,7 @@
  A Terminal Portfolio. 
  Project is live [www.webprithviyewale.tech](https://cosmicwanderer7.github.io/Terminal-Portfolio/)
 
-![App Screenshot](https://user-images.githubusercontent.com/65147258/234175185-93297c6a-c9bf-4cf1-83a5-d3e1f0156d73.png)
-
-https://github.com/cosmicwanderer7/Terminal-Portfolio/assets/65147258/3551cdc0-d79e-4300-89a6-1424831366f8
-
+![image](https://github.com/user-attachments/assets/2934484b-76cb-4e54-97e7-50bf7edc07de)
 
 
 ### Built With
