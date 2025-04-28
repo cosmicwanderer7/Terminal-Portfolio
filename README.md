@@ -14,8 +14,8 @@ https://github.com/cosmicwanderer7/Terminal-Portfolio/assets/65147258/3551cdc0-d
 
 
 * [Html5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Java Script](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [LastFM api](https://www.last.fm/api)
-* [npm](https://www.npmjs.com/)
 
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
