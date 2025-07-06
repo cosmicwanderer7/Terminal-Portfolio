@@ -1,48 +1,45 @@
 # Terminal-Portfolio
+
 ## About The Project
- A Terminal Portfolio. 
- Project is live [www.webprithviyewale.tech](https://cosmicwanderer7.github.io/Terminal-Portfolio/)
+A terminal-style developer portfolio built to showcase skills and projects through a fun, interactive command-line interface.
 
-![image](https://github.com/user-attachments/assets/2934484b-76cb-4e54-97e7-50bf7edc07de)
+🌐 **Live Demo:** [www.webprithviyewale.tech](https://cosmicwanderer7.github.io/Terminal-Portfolio/)
 
+![Terminal Portfolio Screenshot](https://github.com/user-attachments/assets/2934484b-76cb-4e54-97e7-50bf7edc07de)
 
 ### Built With
-
-
-
-* [Html5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [Java Script](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [LastFM api](https://www.last.fm/api)
-
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Last.fm API](https://www.last.fm/api)
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-## Contributing
+---
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## Use This as a Template
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. 
+You are welcome to use this repository as a **template for your own terminal-style portfolio**!  
+Feel free to fork it, modify it, and make it your own. Credit is appreciated but not mandatory.
 
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch
-3. Commit your Changes 
-5. Push to the Branch 
-6. Open a Pull Request
+And don’t forget to ⭐ the project if you find it helpful!
 
 <p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
-## Creative Commons licenses
+---
 
-![by-sa](https://user-images.githubusercontent.com/65147258/209966249-88275ba5-75a3-4a4e-af1c-7d861c5cf838.png)
+## License
 
-Terminal-styled portfolio by Prithvi Yewale is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-Based on a work at https://github.com/cosmicwanderer7/portfolio.
+![CC BY-SA 4.0](https://user-images.githubusercontent.com/65147258/209966249-88275ba5-75a3-4a4e-af1c-7d861c5cf838.png)
 
-<!-- CONTACT -->
+**Terminal Portfolio** by **Prithvi Yewale** is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).  
+Based on [this GitHub repository](https://github.com/cosmicwanderer7/portfolio).
+
+---
+
 ## Contact
-  yewaleprithvi2003@gmail.com Gmail <br>
- [@PrithviYewale](https://twitter.com/PrithviYewale) Twitter <br>
- [@prithvi_yewale](https://www.instagram.com/prithvi_yewale) Instagram <br>
+
+- 📧 Email: [yewaleprithvi2003@gmail.com](mailto:yewaleprithvi2003@gmail.com)  
+- 🐦 Twitter: [@PrithviYewale](https://twitter.com/PrithviYewale)  
+- 📸 Instagram: [@prithvi_yewale](https://www.instagram.com/prithvi_yewale)
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
