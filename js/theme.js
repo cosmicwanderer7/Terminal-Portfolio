@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (useAnimeTheme) {
     // Apply anime theme
     document.body.classList.add("theme-anime");
-    console.log("Applied anime theme");
+    console.log("Applied cherry blossom theme");
   } else {
     // Keep default cyber theme
-    console.log("Using default cyber theme");
+    console.log("Using default theme");
   }
 });
