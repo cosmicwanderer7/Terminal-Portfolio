@@ -12,16 +12,37 @@
       content="prithvi, prithviYewale, portfolio, HTML, CSS, prithvi_yewale, terminal terminal-portfolio"
     />
     <meta name="author" content="Prithvi Yewale" />
+
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Preconnect and Preload -->
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
-    <link rel="preload" href="assets/cat.webp" as="image" />
+    <link rel="preload" href="assets/cat.webp" as="image" type="image/webp" />
+    <link
+      rel="preload"
+      href="assets/beautiful.webp"
+      as="image"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      href="fonts/FantasqueSansMono-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+
+    <!-- Stylesheet -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/39565093f3.js"
       crossorigin="anonymous"
       defer
     ></script>
 
+    <!-- JS: Spotify API Fetch -->
     <script>
       async function fetchLatestTrack() {
         try {
@@ -49,8 +70,7 @@
             "Try again later";
         }
       }
-
-      fetchLatestTrack();
+      document.addEventListener("DOMContentLoaded", fetchLatestTrack);
 
       function close_window() {
         if (confirm("Close Window?")) {
@@ -58,6 +78,7 @@
         }
       }
     </script>
+
     <title>Prithvi Sanjay Yewale</title>
   </head>
   <body>
@@ -234,7 +255,7 @@
           </div>
         </div>
       </footer>
-
+      <!-- Lazy Loaded Cursor Cat -->
       <picture>
         <source srcset="assets/cat.webp" type="image/webp" />
         <img
@@ -245,6 +266,7 @@
         />
       </picture>
 
+      <!-- JS Files at end for non-blocking load -->
       <script src="js/theme.js" defer></script>
       <script src="js/caret.js" defer></script>
       <script src="js/cursor.js" defer></script>
