@@ -1,6 +1,6 @@
 @font-face {
   font-family: "FantasqueSansMono";
-  src: url("assets/fonts/FantasqueSansMono-Regular.woff") format("woff");
+  src: url("assets/fonts/fantasquesansmonoregular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,7 +60,7 @@
   --color-spotify-icon: #31748f;
   --color-spotify-text: #fff;
   --color-spotify-track-info: #c9cadd;
-  --background-image: url("assets/beautiful-anime-street-scenery-cherry-blossom-kimono-uhdpaper.com-4K-6.1621.webp");
+  --background-image: url("assets/beautifullanimestreetscenerycherryblossom.webp");
 }
 
 a {
