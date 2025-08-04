@@ -21,28 +21,37 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
+
     <script>
-      $.getJSON(
-        "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json",
-        function (data) {
-          let artist = document.getElementById("song");
-          let name = document.getElementById("track");
-          let link = document.querySelector(".spotify-panel a");
+      async function fetchLatestTrack() {
+        try {
+          const response = await fetch(
+            "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json",
+          );
+          const data = await response.json();
+          const track = data.recenttracks.track?.[0];
 
-          const artistVal = data.recenttracks.track[0].artist["#text"];
-          const trackVal = data.recenttracks.track[0].name;
-          const urlVal = data.recenttracks.track[0].url;
+          if (track) {
+            document.getElementById("track-name").textContent =
+              track.name || "N/A";
+            document.getElementById("artist-name").textContent =
+              track.artist["#text"] || "N/A";
+            document.querySelector(".spotify-panel a").href = track.url || "#";
+          } else {
+            document.getElementById("track-name").textContent =
+              "No track playing";
+            document.getElementById("artist-name").textContent = "-";
+          }
+        } catch (error) {
+          console.error("Failed to fetch track:", error);
+          document.getElementById("track-name").textContent = "Error fetching";
+          document.getElementById("artist-name").textContent =
+            "Try again later";
+        }
+      }
 
-          artist.append(artistVal);
-          name.append(trackVal);
-          link.href = urlVal;
-        },
-      );
+      fetchLatestTrack();
+
       function close_window() {
         if (confirm("Close Window?")) {
           window.location.href = "about:blank";
@@ -214,8 +223,12 @@
                 aria-label="Now listening to track on Spotify"
               >
                 <div class="spotify-info">Now Listening to...</div>
-                <div id="track" aria-label="Track name">Track:</div>
-                <div id="song" aria-label="Artist name">Artist:</div>
+                <div id="track" aria-label="Track name">
+                  Track: <span id="track-name">Loading...</span>
+                </div>
+                <div id="song" aria-label="Artist name">
+                  Artist: <span id="artist-name">Loading...</span>
+                </div>
               </a>
             </div>
           </div>
