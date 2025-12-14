@@ -32,6 +32,7 @@ const commandMap = {
   instagram: "instagram",
   github: "github",
   snake: "snake",
+  exit: "exit",
 };
 
 setTimeout(function () {
@@ -234,8 +235,26 @@ function commander(cmd) {
         );
       }
       break;
+
+    case "quit":
+    case "logout":
+    case "exit":
+      addLine("👋 Session terminated.", "color2", 0);
+      setTimeout(close_window, 500);
+      break;
   }
   scrollToBottom();
+}
+
+function close_window() {
+  // Attempt normal close (works if tab was JS-opened)
+  window.open("", "_self");
+  window.close();
+
+  // Fallback (most browsers): navigate away
+  setTimeout(() => {
+    window.location.href = "about:blank";
+  }, 100);
 }
 
 function newTab(link) {

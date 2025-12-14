@@ -65,6 +65,8 @@ let help = [
 ↳ Run Snake Game.
 <span class="command">clear</span>
 ↳ Clear the terminal.
+<span class="command">exit</span>
+↳ Close the terminal tab.
 </pre></div><br>`,
 ];
 let projects = [
