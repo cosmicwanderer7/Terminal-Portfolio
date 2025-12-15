@@ -92,7 +92,7 @@ body {
   height: 100%;
   min-height: 98vh;
   max-height: 105vh;
-  overflow: hidden;
+
   box-shadow:
     0 20px 25px -5px var(--color-shadow),
     0 8px 10px -6px var(--color-shadow);
